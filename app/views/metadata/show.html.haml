@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Phone:
+  = @metadatum.phone
+%p
+  %b Facebook:
+  = @metadatum.facebook
+%p
+  %b Twitter:
+  = @metadatum.twitter
+%p
+  %b Email:
+  = @metadatum.email
+%p
+  %b Web:
+  = @metadatum.web
+%p
+  %b Kaptive:
+  = @metadatum.kaptive
+%p
+  %b Address:
+  = @metadatum.address
+
+= link_to 'Edit', edit_metadatum_path(@metadatum)
+\|
+= link_to 'Back', metadata_path

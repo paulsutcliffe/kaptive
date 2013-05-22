@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b History:
+  = @about.history
+%p
+  %b Commitment:
+  = @about.commitment
+%p
+  %b Vision:
+  = @about.vision
+%p
+  %b Mission:
+  = @about.mission
+
+= link_to 'Edit', edit_about_path(@about)
+\|
+= link_to 'Back', about_index_path

@@ -1,0 +1,31 @@
+%h1 Listing metadata
+
+%table
+  %tr
+    %th Phone
+    %th Facebook
+    %th Twitter
+    %th Email
+    %th Web
+    %th Kaptive
+    %th Address
+    %th
+    %th
+    %th
+
+  - @metadata.each do |metadatum|
+    %tr
+      %td= metadatum.phone
+      %td= metadatum.facebook
+      %td= metadatum.twitter
+      %td= metadatum.email
+      %td= metadatum.web
+      %td= metadatum.kaptive
+      %td= metadatum.address
+      %td= link_to 'Show', metadatum
+      %td= link_to 'Edit', edit_metadatum_path(metadatum)
+      %td= link_to 'Destroy', metadatum, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Metadatum', new_metadatum_path

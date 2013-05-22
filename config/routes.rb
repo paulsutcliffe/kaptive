@@ -1,4 +1,19 @@
 Kaptive::Application.routes.draw do
+  resources :about
+
+
+  resources :products
+
+
+  resources :metadata
+
+
+  resources :contacts
+
+
+  resources :news
+
+
   root to: 'home#index'
 
   get "home/index"

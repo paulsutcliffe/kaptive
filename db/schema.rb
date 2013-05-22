@@ -11,6 +11,57 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130522052954) do
+
+  create_table "about", :force => true do |t|
+    t.text     "history"
+    t.text     "commitment"
+    t.text     "vision"
+    t.text     "mission"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "metadata", :force => true do |t|
+    t.string   "phone"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "email"
+    t.string   "web"
+    t.string   "kaptive"
+    t.text     "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "logo"
+  end
+
+  create_table "news", :force => true do |t|
+    t.string   "title"
+    t.text     "headline"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "content"
+    t.text     "preview"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "bottle"
+    t.string   "bottleback"
+  end
 
 end

@@ -1,0 +1,25 @@
+%h1 Listing about
+
+%table
+  %tr
+    %th History
+    %th Commitment
+    %th Vision
+    %th Mission
+    %th
+    %th
+    %th
+
+  - @about.each do |about|
+    %tr
+      %td= about.history
+      %td= about.commitment
+      %td= about.vision
+      %td= about.mission
+      %td= link_to 'Show', about
+      %td= link_to 'Edit', edit_about_path(about)
+      %td= link_to 'Destroy', about, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New About', new_about_path
