@@ -44,25 +44,32 @@
 
 
   %body{id: bodyid, class: bodyclass}
-    - if notice
-      %p.notice= notice
+    #site-wrapper
+      - if notice
+        %p.notice= notice
 
-    .container
-      %header{:role => 'banner', :id => 'main-header'}
-        %h1
-          = link_to image_tag('logo.png', alt: 'Dj Alonso'), root_path, id: 'logo'
-        .header-components
-          = render 'layouts/call_us'
-          %nav.main-menu
-            = render 'layouts/menu'  
-
-      %section#content{:role => 'main'}
-        = yield
-      = render 'shared/google_analytics'
-
-    %footer#main-footer
       .container
-        %nav.secondary-menu
-          = render 'layouts/menu'  
-        = render 'layouts/call_us'
-        = render 'shared/social_links_follow' 
+        %header{:role => 'banner', :id => 'main-header'}
+          %h1
+            = link_to image_tag('logo.png', alt: 'Dj Alonso'), root_path, id: 'logo'
+          .header-components
+            = render 'layouts/call_us'
+            %nav.main-menu
+              %h6.element-invisible
+                Main Navigation
+              = render 'layouts/menu'  
+
+        %section#content{:role => 'main'}
+          = yield
+        = render 'shared/google_analytics'
+
+      %footer#main-footer
+        %h6.element-invisible
+          Site Footer
+        .container
+          %nav.secondary-menu
+            %h6.element-invisible
+              Secondary Navigation
+            = render 'layouts/menu'  
+          = render 'layouts/call_us'
+          = render 'shared/social_links_follow' 

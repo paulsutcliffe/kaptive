@@ -1,15 +1,31 @@
 
 
 body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size: 13px; overflow-y: scroll;
-background: $bg-hojas; -pie-background: $bg-hojas-pie}
+background: black}
 h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0; 
 line-height: 100%; font-weight: 300; font-family: $font-open-sans}
-h2.page-title, h2.title {color: white; @include inline-block; text-transform: uppercase; 
-padding: 10px; border-bottom: $title-bottom solid white; line-height: 115% }
+h2.page-title, h2.title {color: white; @include inline-block;
+line-height: 115% }
 ul, ol, dl, p {margin: 0} li {list-style: none}
 p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px}
 figure {margin: 0}
 section {padding-bottom: $row-bottom;}
+
+#site-wrapper {background: $bg-hojas; -pie-background: $bg-hojas-pie}
+.container {}
+
+h2.page-title {
+  color: black;
+  font-size: $font-heading;
+  .caption {
+    background: $yellow; line-height: 100%; @extend .captioned;
+  }
+  .sub-title.caption {
+    background: $orange; line-height: 100%; @include inline-block;
+    font-size: $font-heading-secondary; 
+  }
+}
+
 
 header#main-header {
   position: relative; 
@@ -40,7 +56,7 @@ header#main-header {
 }
 
 section#content {
-  min-height: 500px;
+  position: relative;
   .alert-container {
     @extend .container;
     padding-top: 8px; margin-top: 10px;
@@ -103,15 +119,22 @@ footer#main-footer {
   &.iterate {padding: 5px 0; text-align: right; z-index: 100; position: relative}
 }
 
+#main-presentation {
+  width: 1009px; height: 890px; padding-top: 45px;
+  position: relative; left: -12px;
+  background: $bg-bottles
+}
 // Inicio
-.dj-presentation {
-  .dj-presentation-foto {
-    @extend .borderer;
-    @include makeColumn(6);
+.front #content {
+  padding-bottom: 0;
+  h2.page-title {padding: 167px 0 0 60px;
+    @include absolute(right, top, 65px, 250px);
+    background: $raya-1;
   }
-  .dj-presentation-likebox {
-    @include makeColumn(6);
-  }
+}
+
+.our-brand {
+  @include absolute(right, top, 0, 400px);
 }
 
 // forms
