@@ -13,6 +13,7 @@ gem 'mysql2'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'bootstrap-sass', '~> 2.3.1.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -21,6 +22,18 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development, :test do
+  gem "rspec-rails", "~> 2.13.0"
+  gem "factory_girl_rails", "~> 4.2.1"
+end
+
+group :test do
+  gem "faker", "~> 1.1.2"
+  gem "capybara", "~> 2.0.2"
+  gem "database_cleaner", "~> 0.9.1"
+  gem "launchy", "~> 2.2.0"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -37,12 +50,18 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
+gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '49835a0d90'
+
+gem "auto_html"
+gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"
 gem "haml-rails"
 gem "will_paginate"
 gem "inherited_resources"
 gem "page_title_helper"
-gem "friendly_id"
-gem "rspec-rails", :group => [:test, :development]
+gem "friendly_id", "~> 4.0.9"
 gem "devise"
+gem "rmagick"
+gem "carrierwave"
+gem "will_paginate"
