@@ -22,7 +22,7 @@ h2.page-title {
   }
   .sub-title.caption {
     background: $orange; line-height: 100%; @include inline-block;
-    font-size: $font-heading-secondary; 
+    font-size: $font-heading-secondary; margin-left: 55px;
   }
 }
 
@@ -129,7 +129,7 @@ footer#main-footer {
 .front #content {
   padding-bottom: 0;
   h2.page-title {padding: 167px 0 0 60px;
-    @include absolute(right, top, 65px, 250px);
+    @include absolute(right, top, 15px, 250px);
     background: $raya-1;
   }
 }
@@ -155,7 +155,7 @@ footer#main-footer {
 }
 
 .our-brand {
-  @include absolute(right, top, 0, 400px);
+  @include absolute(right, top, 40px, 540px);
 }
 .resumen-id {
   width: 255px; float: left; margin-right: 30px;
