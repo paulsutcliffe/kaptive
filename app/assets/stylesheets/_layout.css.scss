@@ -28,19 +28,16 @@ header#main-header {
         @include menu;
       }
     }
-    .call-us {
-      top: 35px; font-size: $font-large;
-      text-align: right;
-      b {
-        display: block; font-size: $font-largest; padding-top: 10px;
-      }
-    }
+   
+    .call-us {top: 35px} 
     .call-us, 
     nav.main-menu {position: absolute; right: 30px}
   }
 }
 
-
+.call-us {
+  @include call_us;
+}
 
 section#content {
   min-height: 500px;
@@ -56,12 +53,38 @@ section#content {
 footer#main-footer {
 
   background: black;
-  .container { height: 335px; 
+  .container { height: 255px; position: relative;
     .footer-credits {padding-top: 30px;
       a, p {color: white; line-height: 100%; display: block; margin: 0}
       #autor {text-align: right}
     }
   }
+
+  nav.secondary-menu {
+    right: 455px;
+    ul {
+      @include menu;
+      li {
+        span {color: $gray}
+      }
+    }
+  }
+
+  .call-us {
+    right: 205px; color: $gray-light;
+    b {
+      color: white;
+    }
+  }
+
+  .social-links.follow {
+    right: 85px;
+    @include inline-block-right(15px);
+  }
+
+  nav.secondary-menu,
+  .call-us,
+  .social-links.follow {position: absolute; bottom: 160px}
 }
 
 .region {

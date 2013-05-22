@@ -16,8 +16,29 @@
 
 }
 
+@mixin call_us {
+  font-size: $font-large;
+  text-align: right;
+    b {
+      display: block; font-size: $font-largest; padding-top: 10px;
+    }
+}
 
 
+
+
+// en evaluación
+@mixin inline-block-left($separation) {
+  text-align: right;
+  li {margin-right: $separation}
+  li, a {@include inline-block}
+}
+
+@mixin inline-block-right($separation) {
+  text-align: right;
+  li {margin-left: $separation}
+  li, a {@include inline-block}
+}
 
 
 
