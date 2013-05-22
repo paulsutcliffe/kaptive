@@ -1,23 +1,61 @@
-%h1 Listing news
 
-%table
-  %tr
-    %th Title
-    %th Headline
-    %th Content
-    %th
-    %th
-    %th
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'News'
+  
+  //- if current_admin 
+  .administrate.create
+    = link_to 'Crear Noticia', new_news_path, class: 'btn btn-primary'
 
-  - @news.each do |news|
-    %tr
-      %td= news.title
-      %td= news.headline
-      %td= news.content
-      %td= link_to 'Show', news
-      %td= link_to 'Edit', edit_news_path(news)
-      %td= link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' }
+.content
+  .content-inner
 
-%br
+    #news-presentation
+      %h3
+        Working with the Media
+      %p
+        As a company, NWPI seek long lasting and strong relationships with our media partners. Our objective is to work together to build an environmentally friendly culture: full of wellness.
+      
+        
 
-= link_to 'New News', new_news_path
+
+    .resumen-id 
+      = image_tag 'img-noticia-1.jpg'
+      %h3
+        Natural Energy
+      %p
+        Lipsum
+      = link_to 'Read more', '', class: 'link link-read-more'
+    
+    .resumen-id 
+      = image_tag 'img-noticia-2.jpg'
+      %h3
+        Natural Energy
+      %p
+        Lipsum
+      = link_to 'Read more', '', class: 'link link-read-more'
+    
+    
+    .resumen-id 
+      = image_tag 'img-noticia-3.jpg'
+      %h3
+        Natural Energy
+      %p
+        Lipsum
+      = link_to 'Read more', '', class: 'link link-read-more'
+  
+    - @news.each do |news|
+      .resumen-id 
+        %h3
+          = news.title
+        = news.headline
+        %p
+          = news.content
+        = link_to 'Read more', '', class: 'link link-read-more'
+        .administrate.iterate
+          = link_to 'Show', news
+          = link_to 'Edit', edit_news_path(news)
+          = link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+
