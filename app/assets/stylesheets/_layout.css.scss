@@ -133,6 +133,10 @@ footer#main-footer {
   }
 }
 
+.our-brand {
+  @include absolute(right, top, 0, 400px);
+}
+
 // forms
 form {padding: $row-top 0 $row-bottom; 
   &:after {@include clearfix2;
