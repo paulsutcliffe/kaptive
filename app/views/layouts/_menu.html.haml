@@ -1,19 +1,36 @@
 %ul
-  %li.first
-    = link_to_unless_current 'Home', root_path do
-      %span Home
-  %li
-    = link_to_unless_current 'Products', products_path do
-      %span Products
-  %li
-    = link_to_unless_current 'About', about_index_path do
-      %span About
-  %li
-    = link_to_unless_current 'News', news_index_path do
-      %span News
-  %li.last
-    = link_to_unless_current 'Contact', new_contact_path do
-      %span Contact
-  %li{:style => 'display: none'}
-    = link_to_unless_current 'Close Session', '' do
-      %span Cerrar Sesión
+  - if current_admin
+    %li.first
+      = link_to_unless_current 'Metadata', edit_metadatum_path(1) do
+        %span Metadata
+    %li
+      = link_to_unless_current 'Products', products_path do
+        %span Products
+    %li
+      = link_to_unless_current 'About', edit_about_path(1) do
+        %span About
+    %li
+      = link_to_unless_current 'News', news_index_path do
+        %span News
+    %li.last
+      = link_to_unless_current 'Contacts', contacts_path do
+        %span Contacts
+    %li
+    = link_to_unless_current 'Close Session', destroy_admin_session_path, method: :delete do
+      %span Close Session
+  - else
+    %li.first
+      = link_to_unless_current 'Home', root_path do
+        %span Home
+    %li
+      = link_to_unless_current 'Products', products_path do
+        %span Products
+    %li
+      = link_to_unless_current 'About', about_path(1) do
+        %span About
+    %li
+      = link_to_unless_current 'News', news_index_path do
+        %span News
+    %li.last
+      = link_to_unless_current 'Contact', new_contact_path do
+        %span Contact
