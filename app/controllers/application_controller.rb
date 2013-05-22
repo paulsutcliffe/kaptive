@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   def bodyclass
     @action = params[:action].parameterize
   
-    if params[:controller] == 'inicio'
+    if params[:controller] == 'home'
       @front = 'front'
     else
       @front = 'not-front'

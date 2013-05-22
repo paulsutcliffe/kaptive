@@ -1,9 +1,9 @@
 
 // backgrounds
-$bg-hojas:                       url(bg-leafes-left.png) no-repeat 0px 0, url(bg-leafes-right.png) no-repeat 100% 0;
-$bg-hojas-pie:                   url(/assets/bg-leafes-left.png) no-repeat 0px 0, url(/assets/bg-leafes-right.png) no-repeat 100% 0;
-$bg-bottles:                     url(bg-multiple-bottles.png) no-repeat 0 0;
-
+$bg-hojas:                       url(bg-leafes-left.png) no-repeat 0px 0 , url(bg-leafes-right.png) no-repeat 100% 0 white;
+$bg-hojas-pie:                   url(/assets/bg-leafes-left.png) no-repeat 0px 0 , url(/assets/bg-leafes-right.png) no-repeat 100% 0 white;
+$bg-bottles:                     url(bg-multiple-bottles.png) no-repeat 0 100%;
+$raya-1:                         url(raya-1.png) no-repeat 0 0;
 
 // spaces
 $row-top:                        30px;
@@ -25,9 +25,13 @@ $font-large:                     18px;
 $font-largest:                   24px;
 
 $font-text:                      15px;
-$font-heading:                   24px;
+$font-heading:                   28px;
+$font-heading-secondary:         22px;
+
 
 // colors  
 $dark:                           #000;
 $gray:                           #636363;
 $gray-light:                     #7d7d7d;
+$yellow:                         #f5f179;
+$orange:                         #f95f34;
