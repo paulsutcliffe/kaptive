@@ -3,22 +3,17 @@
     = link_to_unless_current 'Home', root_path do
       %span Home
   %li
-    = link_to_unless_current 'Products', 'djalonso_index_path' do
+    = link_to_unless_current 'Products', products_path do
       %span Products
   %li
-    = link_to_unless_current 'About', '' do
+    = link_to_unless_current 'About', about_index_path do
       %span About
   %li
     = link_to_unless_current 'News', news_index_path do
       %span News
   %li.last
-    = link_to_unless_current 'Contact', '' do
+    = link_to_unless_current 'Contact', new_contact_path do
       %span Contact
   %li{:style => 'display: none'}
-    = link_to_unless_current 'Cerrar Sesión', '' do
+    = link_to_unless_current 'Close Session', '' do
       %span Cerrar Sesión
-
-
-
-
-                                

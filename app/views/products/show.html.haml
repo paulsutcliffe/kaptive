@@ -12,6 +12,12 @@
 %p
   %b Preview:
   = @product.preview
+%p
+  %b Bottle:
+  = image_tag @product.bottle_url(:regular) if @product.bottle?
+%p
+  %b Bottle Back:
+  = image_tag @product.bottleback_url(:regular) if @product.bottleback?
 
 = link_to 'Edit', edit_product_path(@product)
 \|
