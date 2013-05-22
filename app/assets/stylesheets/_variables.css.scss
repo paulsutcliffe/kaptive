@@ -1,0 +1,32 @@
+
+// backgrounds
+$bg-hojas:                       url(bg-leafes-left.png) no-repeat 0px 0, url(bg-leafes-right.png) no-repeat 100% 0;
+$bg-hojas-pie:                   url(/assets/bg-leafes-left.png) no-repeat 0px 0, url(/assets/bg-leafes-right.png) no-repeat 100% 0;
+$bg-bottles:                     url(bg-multiple-bottles.png) no-repeat 0 0;
+
+
+// spaces
+$row-top:                        30px;
+$row-bottom:                     50px;
+$title-bottom:                   20px;
+$sub-title-bottom:               10px;
+
+// heights
+$header-height:                  155px;
+
+// typography
+$font-open-sans:                 'Open Sans', sans-serif;
+
+// font-sizes
+$font-tiny:                      11px;
+$font-small:                     13px;
+$font-medium:                    15px;
+$font-large:                     18px;
+$font-largest:                   24px;
+
+$font-text:                      15px;
+$font-heading:                   24px;
+
+// colors  
+$dark:                           #000;
+$gray:                           #636363;

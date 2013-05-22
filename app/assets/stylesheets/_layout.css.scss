@@ -1,0 +1,157 @@
+
+
+body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size: 13px; overflow-y: scroll;
+background: $bg-hojas; -pie-background: $bg-hojas-pie}
+h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0; 
+line-height: 100%; font-weight: 300; font-family: $font-open-sans}
+h2.page-title, h2.title {color: white; @include inline-block; text-transform: uppercase; 
+padding: 10px; border-bottom: $title-bottom solid white; line-height: 115% }
+ul, ol, dl, p {margin: 0} li {list-style: none}
+p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px}
+figure {margin: 0}
+section {padding-bottom: $row-bottom;}
+
+header#main-header {
+  position: relative; 
+  @include makeRow();
+  h1 {
+    #logo {position: absolute; top: 35px; left: 60px}
+    @include makeColumn(4); 
+    height: $header-height;
+  }
+  .header-components {
+    height: $header-height;
+    @include makeColumn(8);
+    nav.main-menu {
+      top: 110px; 
+      ul {
+        @include menu;
+      }
+    }
+    .call-us {
+      top: 35px; font-size: $font-large;
+      text-align: right;
+      b {
+        display: block; font-size: $font-largest; padding-top: 10px;
+      }
+    }
+    .call-us, 
+    nav.main-menu {position: absolute; right: 30px}
+  }
+}
+
+
+
+section#content {
+  min-height: 500px;
+  .alert-container {
+    @extend .container;
+    padding-top: 8px; margin-top: 10px;
+    .alert-inner {
+      @include makeColumn(12)
+    }
+  }
+}
+
+footer#main-footer {
+
+  background: black;
+  .container { height: 335px; 
+    .footer-credits {padding-top: 30px;
+      a, p {color: white; line-height: 100%; display: block; margin: 0}
+      #autor {text-align: right}
+    }
+  }
+}
+
+.region {
+  @extend .row;
+}
+
+
+.content {
+  @include makeRow();
+}
+
+// Admin
+.administrate {
+  padding-bottom: $row-bottom; 
+  &.create {}
+  &.iterate {padding: 5px 0; text-align: right; z-index: 100; position: relative}
+}
+
+// Inicio
+.dj-presentation {
+  .dj-presentation-foto {
+    @extend .borderer;
+    @include makeColumn(6);
+  }
+  .dj-presentation-likebox {
+    @include makeColumn(6);
+  }
+}
+
+// forms
+form {padding: $row-top 0 $row-bottom; 
+  &:after {@include clearfix2;
+  }
+  .fields {width: 100%; float: left; }
+    
+  .field, .actions {margin: 0; padding-bottom: 15px;
+    .button-delete {margin-top: 5px}
+    .button-create {margin-top: 5px; margin-left: 105px; float: left; clear: left}
+  }
+  .datos {padding-left: 100px}
+  .mensaje {padding-right: 135px}
+  .field {
+    label {@include inline-block; width: 90px; text-align: right; padding-right: 10px; text-transform: uppercase; font-size: 16px; color: white; font-weight: 300; padding-top: 10px}
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea, .tagsinput {width: 230px; padding: 10px; background: white; border: 0; color: black; height: auto; margin: 0;
+      border-radius: 3px; @include css3pie; @include inline-block;
+    }
+    textarea {height: 150px; min-height: 150px; resize: vertical; @include textarea-size}
+    input[type="file"] {margin-top: 5px}
+  }
+  .actions {padding-right: 40px;
+    input {@include submit; float: right }
+  }
+}
+
+// buttons inheritance
+.button {
+  &.button-create {
+    @extend .btn;
+    @extend .btn-info;
+  }
+  &.button-update {
+    @extend .btn;
+    @extend .btn-success; 
+  }
+  &.button-delete {
+    @extend .btn;
+    @extend .btn-warning;
+  }
+  &.button-back {
+  //  @extend .btn;
+  // @extend .btn-info;
+  @include button; 
+  }
+  &.button-show {
+    @extend .btn;
+    @extend .btn-info;
+  }
+
+}
+
+.content-header {padding-bottom: $row-bottom/2; float: left; clear: left; width: 100%;
+  h2.page-title, .button-back {float: left; clear: left}
+
+}
+
+// devise
+body[id^="devise"] br {display: none}
+
+
+
