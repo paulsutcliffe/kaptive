@@ -62,7 +62,6 @@ gem "inherited_resources"
 gem "page_title_helper"
 gem "friendly_id", "~> 4.0.9"
 gem "devise"
-gem "rmagick"
 gem 'mini_magick'
 gem "carrierwave"
 gem "will_paginate"

@@ -51,9 +51,6 @@ namespace :deploy do
     end
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-    sudo "mkdir -p #{shared_path}/config"
-    sudo "wget --no-check-certificate 'https://raw.github.com/paulsutcliffe/kaptive/master/config/database.example.yml' -O #{shared_path}/config/database.yml"
-    puts "Now edit the config files in #{shared_path}."
   end
   before "deploy:cold", "deploy:create_database"
   after "deploy:setup", "deploy:setup_config"

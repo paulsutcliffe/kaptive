@@ -49,6 +49,10 @@ class BottleUploader < CarrierWave::Uploader::Base
     process resize_and_crop: 100
   end
 
+  version :blurred do
+    process blur: 3.0
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
@@ -82,6 +86,13 @@ class BottleUploader < CarrierWave::Uploader::Base
         image.shave("#{remove}x0")
       end
       image.resize("#{size}x#{size}")
+      image
+    end
+  end
+
+  def blur(blur_factor)
+    manipulate! do |image|
+      image.radial_blur blur_factor
       image
     end
   end
