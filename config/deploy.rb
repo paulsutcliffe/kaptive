@@ -7,7 +7,7 @@ set :rvm_type, :user  # Don't use system-wide RVM
 server "rubyonrailsperu.com", :web, :app, :db, primary: true
 
 set :application, "kaptive"
-set :user, "kaptive"
+set :user, "paul"
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
