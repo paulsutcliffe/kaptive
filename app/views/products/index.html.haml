@@ -1,29 +1,35 @@
-%h1 Listing products
+= render 'scripts/carousel_evolution'
 
-%table
-  %tr
-    %th
-    %th Name
-    %th Description
-    %th Content
-    %th Preview
-    %th
-    %th
-    %th
 
-  - @products.each do |product|
-    %tr
-      %th= image_tag product.bottle_url(:regular) if product.bottle?
-      %td= product.name
-      %td= product.description
-      %td= product.content
-      %td= product.preview
-      %td= image_tag product.bottle_url(:thumb) if product.bottle?
-      %td= image_tag product.bottleback_url(:thumb) if product.bottleback?
-      %td= link_to 'Show', product
-      %td= link_to 'Edit', edit_product_path(product)
-      %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Productos'
 
-= link_to 'New Product', new_product_path
+  //- if current_admin
+  .administrate.create
+    = link_to 'Crear Producto', new_product_path, class: 'btn btn-primary'
+
+
+
+.content
+  .content-inner
+    <!-- BEGIN CAROUSEL -->
+    .carousel
+      <!-- BEGIN SLIDES -->
+      .slides
+        - @products.each do |product|
+          <!-- SLIDE ITEM -->
+          .resumen-id 
+            = image_tag product.bottle_url(:regular) if product.bottle?
+            = product.name
+            = product.description
+            = product.content
+            = product.preview
+            = image_tag product.bottle_url(:thumb) if product.bottle?
+            = image_tag product.bottleback_url(:thumb) if product.bottleback?
+            = link_to 'Show', product
+            = link_to 'Edit', edit_product_path(product)
+            = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
