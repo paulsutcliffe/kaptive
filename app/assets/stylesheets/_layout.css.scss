@@ -166,6 +166,17 @@ footer#main-footer {
   }
 }
 
+.product-description {
+  @include absolute(right, top, 40px, 540px); z-index: 50;
+  .resumen-id {
+    @include absolute(right, top, 0px, 0px); background: white;
+    .productos-imagen {
+    }
+  }
+}
+
+.slides .description {display: block}
+
 
 // news
 #news-presentation {

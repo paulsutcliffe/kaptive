@@ -31,10 +31,25 @@
         reflectionHeight:0.2, 
         reflectionOpacity:0.5, 
         reflectionColor:'255,255,255',
-        description:false, descriptionContainer:'.description',
+        description:true, descriptionContainer:'.description',
         backOpacity:1,
         before: function(carousel){}, 
-        after: function(carousel){}
+        after: function(carousel){sincronizar_carousel_con_descripciones()}
 
       });                              
+
+
+
+
+      sincronizar_carousel_con_descripciones();
     });
+
+    function sincronizar_carousel_con_descripciones() {
+      slides = $('.slides');
+      descripciones = $('.product-description .indexed');
+
+      descripciones.each(function() {
+        current_z_index = slides.find('.indexed:eq(' + $(this).index() +')').css('z-index');
+        $(this).css('z-index', current_z_index);
+      });
+    }

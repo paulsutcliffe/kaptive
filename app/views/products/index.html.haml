@@ -21,12 +21,25 @@
       .slides
         - @products.each do |product|
           <!-- SLIDE ITEM -->
-          %div
+          .indexed
             = image_tag product.bottle_url(:regular) if product.bottle?
 
+    .product-description
+      - @products.each do |product|
+        .resumen-id.indexed
+          %h3        
+            = product.name
+            %span
+              = product.description
+
+          .productos-imagen
+            = image_tag product.bottle_url(:thumb) if product.bottle?
+            = image_tag product.bottleback_url(:thumb) if product.bottleback?
+          
+           
+
 -#
-  = product.name
-  = product.description
+    = product.description
   = product.content
   = product.preview
   = image_tag product.bottle_url(:thumb) if product.bottle?
