@@ -1,9 +1,40 @@
 - content_for :css do
   = stylesheet_link_tag 'jquery-carousel-evolution/carousel.css'
 - content_for :javascript do
-  = javascript_include_tag 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js'
+  = javascript_include_tag 'jquery-carousel-evolution/jquery-1.4.4.min.js', 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js'
   :javascript
     $(document).ready(function(){
-      $('.carousel').carousel({hAlign:'left', vAlign:'center', hMargin:0.5});                              
-    });
+      $('.carousel').carousel({
+        hAlign:'left', 
+        vAlign:'center', 
+        hMargin:1.1,
+        vMargin:0.2, 
+        frontWidth:200, 
+        frontHeight:665, 
+        carouselWidth:1200, 
+        carouselHeight:890, 
+        left:0, 
+        right:0, 
+        top:0, 
+        bottom:0, 
+        backZoom:0.8, 
+        slidesPerScroll:5, 
+        speed:500, 
+        buttonNav:'none', 
+        directionNav:false,
+        autoplay:false, 
+        autoplayInterval:5000, 
+        pauseOnHover:true, 
+        mouse:true, 
+        shadow:false, 
+        reflection:true, 
+        reflectionHeight:0.2, 
+        reflectionOpacity:0.5, 
+        reflectionColor:'255,255,255',
+        description:false, descriptionContainer:'.description',
+        backOpacity:1,
+        before: function(carousel){}, 
+        after: function(carousel){}
 
+      });                              
+    });

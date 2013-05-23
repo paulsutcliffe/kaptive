@@ -21,15 +21,17 @@
       .slides
         - @products.each do |product|
           <!-- SLIDE ITEM -->
-          .resumen-id 
+          %div
             = image_tag product.bottle_url(:regular) if product.bottle?
-            = product.name
-            = product.description
-            = product.content
-            = product.preview
-            = image_tag product.bottle_url(:thumb) if product.bottle?
-            = image_tag product.bottleback_url(:thumb) if product.bottleback?
-            = link_to 'Show', product
-            = link_to 'Edit', edit_product_path(product)
-            = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+-#
+  = product.name
+  = product.description
+  = product.content
+  = product.preview
+  = image_tag product.bottle_url(:thumb) if product.bottle?
+  = image_tag product.bottleback_url(:thumb) if product.bottleback?
+  = link_to 'Show', product
+  = link_to 'Edit', edit_product_path(product)
+  = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
