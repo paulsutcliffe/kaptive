@@ -12,7 +12,6 @@ gem 'mysql2'
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', '~> 2.3.1.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -21,6 +20,7 @@ group :assets do
 end
 
 gem 'sass-rails', '~> 3.2.3'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 gem 'jquery-rails'
 
