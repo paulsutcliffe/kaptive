@@ -159,6 +159,11 @@ footer#main-footer {
 }
 .resumen-id {
   width: 255px; float: left; margin-right: 30px;
+  .title {
+     padding: 167px 0 0 60px;
+     background: $raya-1; 
+      span {}
+  }
   h3 {font-size: $font-large; padding: 10px 0; font-weight: 600; color: $gray-1}
   p {}
   .link.link-read-more {
@@ -169,14 +174,13 @@ footer#main-footer {
 .product-description {
   @include absolute(right, top, 40px, 540px); z-index: 50;
   .resumen-id {
-    @include absolute(right, top, 0px, 0px); background: white;
+    @include absolute(right, top, 0px, 0px); 
     .productos-imagen {
     }
   }
 }
 
 .slides .description {display: block}
-
 
 // news
 #news-presentation {
