@@ -10,6 +10,9 @@
   %b Commitment:
   = @about.commitment
 %p
+  %b Commitment Image
+  = image_tag @about.commitment_image_url if @about.commitment_image?
+%p
   %b Vision:
   = @about.vision
 %p
