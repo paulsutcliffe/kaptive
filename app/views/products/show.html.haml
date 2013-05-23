@@ -1,5 +1,8 @@
 %p#notice= notice
 
+- @bottles.each do |bottle|
+  = link_to image_tag(bottle.bottle_url(:little)), product_url(bottle)
+
 %p
   %b Name:
   = @product.name

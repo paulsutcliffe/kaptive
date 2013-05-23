@@ -37,7 +37,11 @@ class BottleUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :regular do
-    process :resize_to_limit => [220, 870]
+    process :resize_to_limit => [200, 665]
+  end
+
+  version :little do
+    process :resize_to_limit => [55, 183]
   end
 
   version :thumb do
