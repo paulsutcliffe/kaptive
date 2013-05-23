@@ -1,6 +1,9 @@
 %p#notice= notice
 
 %p
+  %b Image:
+  = image_tag @news.image_url(:show) if @news.image?
+%p
   %b Title:
   = @news.title
 %p

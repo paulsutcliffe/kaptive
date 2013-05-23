@@ -3,8 +3,8 @@
   %h2.page-title
     .caption
       = page_title! 'News'
-  
-  //- if current_admin 
+
+  //- if current_admin
   .administrate.create
     = link_to 'Crear Noticia', new_news_path, class: 'btn btn-primary'
 
@@ -16,43 +16,15 @@
         Working with the Media
       %p
         As a company, NWPI seek long lasting and strong relationships with our media partners. Our objective is to work together to build an environmentally friendly culture: full of wellness.
-      
-        
 
-
-    .resumen-id 
-      = image_tag 'img-noticia-1.jpg'
-      %h3
-        Natural Energy
-      %p
-        Lipsum
-      = link_to 'Read more', '', class: 'link link-read-more'
-    
-    .resumen-id 
-      = image_tag 'img-noticia-2.jpg'
-      %h3
-        Natural Energy
-      %p
-        Lipsum
-      = link_to 'Read more', '', class: 'link link-read-more'
-    
-    
-    .resumen-id 
-      = image_tag 'img-noticia-3.jpg'
-      %h3
-        Natural Energy
-      %p
-        Lipsum
-      = link_to 'Read more', '', class: 'link link-read-more'
-  
     - @news.each do |news|
-      .resumen-id 
+      .resumen-id
+        = image_tag news.image_url(:thumb) if news.image?
         %h3
           = news.title
-        = news.headline
         %p
-          = news.content
-        = link_to 'Read more', '', class: 'link link-read-more'
+          = truncate(news.content, :length => 145)
+        = link_to 'Read more', news, class: 'link link-read-more'
         .administrate.iterate
           = link_to 'Show', news
           = link_to 'Edit', edit_news_path(news)

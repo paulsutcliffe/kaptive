@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :description
       t.text :content
       t.text :preview
+      t.string :slug
 
       t.timestamps
     end

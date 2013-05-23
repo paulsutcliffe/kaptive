@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   def load_metadata
     @metadata = Metadatum.first
+    @first_product = Product.first
   end
 
   def bodyid

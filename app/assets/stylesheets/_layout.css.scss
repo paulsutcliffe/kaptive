@@ -2,7 +2,7 @@
 
 body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size: 13px; overflow-y: scroll;
 background: black}
-h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0; 
+h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0;
 line-height: 100%; font-weight: 300; font-family: $font-open-sans}
 h2.page-title, h2.title {color: white; @include inline-block;
 line-height: 115% }
@@ -28,25 +28,25 @@ h2.page-title {
 
 
 header#main-header {
-  position: relative; 
+  position: relative;
   @include makeRow();
   h1 {
     #logo {position: absolute; top: 35px; left: 60px}
-    @include makeColumn(4); 
+    @include makeColumn(4);
     height: $header-height;
   }
   .header-components {
     height: $header-height;
     @include makeColumn(8);
     nav.main-menu {
-      top: 110px; 
+      top: 110px;
       ul {
         @include menu;
       }
     }
-   
-    .call-us {top: 35px} 
-    .call-us, 
+
+    .call-us {top: 35px}
+    .call-us,
     nav.main-menu {position: absolute; right: 30px}
   }
 }
@@ -115,7 +115,7 @@ footer#main-footer {
 
 // Admin
 .administrate {
-  padding-bottom: $row-bottom; 
+  padding-bottom: $row-bottom;
   &.create {}
   &.iterate {padding: 5px 0; text-align: right; z-index: 100; position: relative}
 }
@@ -137,7 +137,7 @@ footer#main-footer {
 .not-front #content {
   padding-bottom: 0;
   header {
-    margin-left: 40px; 
+    margin-left: 40px;
     h2.page-title {
       text-transform: uppercase; font-weight: 600; padding-bottom: 70px;
       font-size: $font-largest; font-size: $font-heading-secondary;
@@ -174,34 +174,6 @@ footer#main-footer {
 }
 
 
-// forms
-form {padding: $row-top 0 $row-bottom; 
-  &:after {@include clearfix2;
-  }
-  .fields {width: 100%; float: left; }
-    
-  .field, .actions {margin: 0; padding-bottom: 15px;
-    .button-delete {margin-top: 5px}
-    .button-create {margin-top: 5px; margin-left: 105px; float: left; clear: left}
-  }
-  .datos {padding-left: 100px}
-  .mensaje {padding-right: 135px}
-  .field {
-    label {@include inline-block; width: 90px; text-align: right; padding-right: 10px; text-transform: uppercase; font-size: 16px; color: white; font-weight: 300; padding-top: 10px}
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea, .tagsinput {width: 230px; padding: 10px; background: white; border: 0; color: black; height: auto; margin: 0;
-      border-radius: 3px; @include css3pie; @include inline-block;
-    }
-    textarea {height: 150px; min-height: 150px; resize: vertical; @include textarea-size}
-    input[type="file"] {margin-top: 5px}
-  }
-  .actions {padding-right: 40px;
-    input {@include submit; float: right }
-  }
-}
-
 // buttons inheritance
 .button {
   &.button-create {
@@ -210,7 +182,7 @@ form {padding: $row-top 0 $row-bottom;
   }
   &.button-update {
     @extend .btn;
-    @extend .btn-success; 
+    @extend .btn-success;
   }
   &.button-delete {
     @extend .btn;
@@ -219,7 +191,7 @@ form {padding: $row-top 0 $row-bottom;
   &.button-back {
   //  @extend .btn;
   // @extend .btn-info;
-  @include button; 
+  @include button;
   }
   &.button-show {
     @extend .btn;

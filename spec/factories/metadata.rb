@@ -14,5 +14,6 @@ FactoryGirl.define do
     Northwood, Santry
     Dublin 9
     Republic of Ireland"
+    logo { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec', 'support', 'images', 'logo.png')) }
   end
 end

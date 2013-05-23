@@ -1,6 +1,9 @@
 %p#notice= notice
 
 %p
+  %b Image
+  = image_tag @about.image_url if @about.image?
+%p
   %b History:
   = @about.history
 %p
@@ -14,5 +17,3 @@
   = @about.mission
 
 = link_to 'Edit', edit_about_path(@about)
-\|
-= link_to 'Back', about_index_path

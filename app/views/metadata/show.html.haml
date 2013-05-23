@@ -1,6 +1,9 @@
 %p#notice= notice
 
 %p
+  %b Logo:
+  = image_tag @metadatum.logo_url(:small) if @metadatum.logo?
+%p
   %b Phone:
   = @metadatum.phone
 %p
@@ -23,5 +26,3 @@
   = @metadatum.address
 
 = link_to 'Edit', edit_metadatum_path(@metadatum)
-\|
-= link_to 'Back', metadata_path

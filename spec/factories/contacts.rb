@@ -2,8 +2,8 @@
 
 FactoryGirl.define do
   factory :contact do
-    name "MyString"
-    email "MyString"
-    message "MyText"
+    name { Faker::Name.name }
+    email { Faker::Internet.email }
+    message { Faker::Lorem.paragraph(sentence_count = 3, supplemental = false) }
   end
 end

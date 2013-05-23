@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20130522173426) do
     t.string   "title"
     t.text     "headline"
     t.text     "content"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
@@ -76,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20130522173426) do
     t.text     "description"
     t.text     "content"
     t.text     "preview"
+    t.string   "slug"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "bottle"

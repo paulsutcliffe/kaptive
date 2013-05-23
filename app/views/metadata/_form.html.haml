@@ -1,4 +1,4 @@
-= form_for @metadatum do |f|
+= form_for @metadatum, :html => { multipart: true } do |f|
   - if @metadatum.errors.any?
     #error_explanation
       %h2= "#{pluralize(@metadatum.errors.count, "error")} prohibited this metadatum from being saved:"
@@ -27,5 +27,8 @@
   .field
     = f.label :address
     = f.text_area :address
+  .field
+    = f.label :logo
+    = f.file_field :logo
   .actions
     = f.submit 'Save'
