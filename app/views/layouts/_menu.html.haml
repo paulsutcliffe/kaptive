@@ -7,8 +7,8 @@
       = link_to_unless_current 'Products', products_path do
         %span Products
     %li
-      = link_to_unless_current 'About', edit_about_path(1) do
-        %span About
+      = link_to_unless_current 'About Us', edit_about_path(1) do
+        %span About Us
     %li
       = link_to_unless_current 'News', news_index_path do
         %span News
@@ -26,11 +26,14 @@
       = link_to_unless_current 'Products', product_path(@first_product.slug) do
         %span Products
     %li
-      = link_to_unless_current 'About', about_path(1) do
-        %span About
+      = link_to_unless_current 'About Us', about_path(1) do
+        %span About Us
     %li
       = link_to_unless_current 'News', news_index_path do
         %span News
     %li.last
       = link_to_unless_current 'Contact', new_contact_path do
         %span Contact
+    %li.last
+      = link_to_unless_current 'Store Locator', new_contact_path do
+        %span Store Locator

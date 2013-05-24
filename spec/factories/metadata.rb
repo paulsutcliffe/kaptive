@@ -3,8 +3,8 @@
 FactoryGirl.define do
   factory :metadatum do
     phone "(305) 235-1611"
-    facebook "http://www.facebook.com/"
-    twitter "http://www.twitter.com/"
+    facebook "http://www.facebook.com/MyKaptive"
+    twitter "http://www.twitter.com/kaptive"
     email "info@nworldp.com"
     web "www.nworldp.com"
     kaptive "www.mykaptive"
