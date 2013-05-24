@@ -1,18 +1,25 @@
-%p#notice= notice
 
-%p
-  %b Image:
-  = image_tag @news.image_url(:show) if @news.image?
-%p
-  %b Title:
-  = @news.title
-%p
-  %b Headline:
-  = @news.headline
-%p
-  %b Content:
-  = @news.content
 
-= link_to 'Edit', edit_news_path(@news)
-\|
-= link_to 'Back', news_index_path
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'News'
+
+  //- if current_admin
+  .administrate.create{:style => 'display: none'}
+    = link_to 'Edit', edit_news_path(@news), class: 'button button-update'
+
+
+
+%section.content
+  .content-inner
+    %h2.title
+      = @news.title
+    .news-headline
+      = paragraph(@news.headline)
+
+    .news-content
+      %figure.news-figure
+        = image_tag @news.image_url(:show) if @news.image?
+      = paragraph(@news.content)
+

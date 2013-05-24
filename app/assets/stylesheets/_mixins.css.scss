@@ -67,7 +67,11 @@ width: 400px !important; height: 200px
 }
 
 @mixin image-left {
-  
+  float: left; margin-right: 20px
+}
+
+@mixin image-right {
+  float: right; margin-left: 20px
 }
 
 @mixin text-heavy {
