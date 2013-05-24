@@ -4,7 +4,7 @@ body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size
 background: black}
 h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0;
 line-height: 100%; font-weight: 300; font-family: $font-open-sans}
-h2.page-title, h2.title {color: white; @include inline-block;
+h2.page-title, .title {color: white; @include inline-block;
 line-height: 115% }
 ul, ol, dl, p {margin: 0} li {list-style: none}
 p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px}
@@ -14,7 +14,7 @@ section {padding-bottom: $row-bottom;}
 #site-wrapper {background: $bg-hojas; -pie-background: $bg-hojas-pie}
 .container {}
 
-h2.page-title {
+h2.page-title, .title {
   color: black;
   font-size: $font-heading;
   .caption {
@@ -22,7 +22,7 @@ h2.page-title {
   }
   .sub-title.caption {
     background: $orange; line-height: 100%; @include inline-block;
-    font-size: $font-heading-secondary; margin-left: 55px;
+    font-size: $font-heading-secondary; margin-top: 20px; /*margin-left: 55px;*/
   }
 }
 
@@ -110,7 +110,7 @@ footer#main-footer {
 
 .content {
   @include makeRow();
-  .content-inner {@include makeColumn(12)}
+  .content-inner {@include makeColumn(12); position: relative}
 }
 
 // Admin
@@ -149,7 +149,7 @@ footer#main-footer {
 
   .content {
     .content-inner {
-      width: 900px; margin-left: 60px; padding-bottom: 50px
+      width: 900px; margin-left: 60px; 
     }
   }
 }
@@ -160,22 +160,35 @@ footer#main-footer {
 .resumen-id {
   width: 255px; float: left; margin-right: 30px;
   .title {
-     padding: 167px 0 0 60px;
      background: $raya-1; 
       span {}
   }
-  h3 {font-size: $font-large; padding: 10px 0; font-weight: 600; color: $gray-1}
+  h3 {}
   p {}
   .link.link-read-more {
     color: $green;
   }
 }
 
+.linea-vertical {@include size(6px, 155px); background: $yellow-3;
+  @include absolute(left, top, 30px, -170px);
+  .linea-horizontal {@include size(120px, 6px); @include absolute(right, top, 0, 0); background: $yellow-3}
+  
+}
+
 .product-description {
-  @include absolute(right, top, 40px, 540px); z-index: 50;
+  @include absolute(left, top, 240px, 310px); z-index: 50;
   .resumen-id {
-    @include absolute(right, top, 0px, 0px); 
-    .productos-imagen {
+    @include absolute(left, top, 0px, 0px); 
+    .resumen-content {
+      padding-top: 85px;
+      margin-left: 185px; width: 285px;
+      .productos-imagen {
+      }
+      .product-label {
+        font-weight: bold; font-size: 14px; 
+      }
+      .product-label, .link-read-more {padding: 10px 0; display: block}
     }
   }
 }
@@ -222,6 +235,7 @@ footer#main-footer {
 
 // devise
 body[id^="devise"] br {display: none}
+
 
 
 

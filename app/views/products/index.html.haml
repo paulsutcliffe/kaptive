@@ -8,7 +8,7 @@
       = page_title! 'Productos'
 
   //- if current_admin
-  .administrate.create
+  .administrate.create{:style => 'display: none'}
     = link_to 'Crear Producto', new_product_path, class: 'btn btn-primary'
 
 
@@ -25,15 +25,27 @@
             = image_tag product.bottle_url(:blurred) if product.bottle?
 
     .product-description
+      .linea-vertical
+        .linea-horizontal
       - @products.each do |product|
         .resumen-id.indexed
           %h3.title
-            = product.name
-            %span
-              = product.description
+            .caption
+              = truncate(product.name, length: 30)
+              %span.sub-title.caption
+                = truncate(product.description, length: 30)
 
-          .productos-imagen
-            = image_tag product.bottle_url(:thumb) if product.bottle?
+          .resumen-content
+            .productos-imagen
+              = image_tag product.bottle_url(:thumb) if product.bottle?
+            
+            .productos-preview
+              %span.product-label
+                Our brand
+              %p
+                = truncate(product.preview, length: 100)
+
+            = link_to 'Read more', product, :class => 'link link-read-more'
 
 -#
     = product.description
@@ -44,4 +56,5 @@
   = link_to 'Show', product
   = link_to 'Edit', edit_product_path(product)
   = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
 
