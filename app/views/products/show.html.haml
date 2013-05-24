@@ -1,24 +1,38 @@
-%p#notice= notice
 
-- @bottles.each do |bottle|
-  = link_to image_tag(bottle.bottle_url(:little)), product_url(bottle)
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Productos'
 
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Content:
-  = @product.content
-%p
-  %b Preview:
-  = @product.preview
-%p
-  %b Bottle:
-  = image_tag @product.bottle_url(:regular) if @product.bottle?
+  - @bottles.each do |bottle|
+    = link_to image_tag(bottle.bottle_url(:little)), product_url(bottle)
 
-= link_to 'Edit', edit_product_path(@product)
-\|
-= link_to 'Back', products_path
+  //- if current_admin
+  .administrate.create{:style => 'display: none'}
+    = link_to 'Edit', edit_product_path(@product), class: 'button button-update'
+
+
+
+.content
+  .producto-imagen
+    = image_tag @product.bottle_url(:regular) if @product.bottle?
+  .producto-detalles
+    .linea-vertical
+      .linea-horizontal
+    %h3.title
+      .caption
+        = truncate(@product.name, length: 30)
+    %span.sub-title
+      .caption
+        = paragraph(@product.description)
+
+    .producto-benefit
+      %h4.box-title
+        PRODUCT BENEFIT
+      .producto-benefit-inner
+        = paragraph(@product.content)
+
+
+  
+
+

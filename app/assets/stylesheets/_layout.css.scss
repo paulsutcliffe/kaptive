@@ -4,7 +4,7 @@ body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size
 background: black}
 h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0;
 line-height: 100%; font-weight: 300; font-family: $font-open-sans}
-h2.page-title, .title {color: white; @include inline-block;
+h2.page-title, .title, .sub-title {color: white; @include inline-block;
 line-height: 115% }
 ul, ol, dl, p {margin: 0} li {list-style: none}
 p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px}
@@ -20,10 +20,19 @@ h2.page-title, .title {
   .caption {
     background: $yellow; line-height: 100%; @extend .captioned;
   }
-  .sub-title.caption {
-    background: $orange; line-height: 100%; @include inline-block;
-    font-size: $font-heading-secondary; margin-top: 20px; /*margin-left: 55px;*/
+  
+}
+.sub-title {
+  padding: 10px;
+  .caption {
+    background: $orange; line-height: 100%; @include inline-block; @extend .captioned; 
+    font-size: $font-heading-secondary; margin-left: 55px; color: black;
+    p {color: white; padding: 0}
   }
+}
+
+.box-title {
+
 }
 
 
@@ -181,16 +190,35 @@ footer#main-footer {
   .resumen-id {
     @include absolute(left, top, 0px, 0px); 
     .resumen-content {
-      padding-top: 85px;
+      
       margin-left: 185px; width: 285px;
       .productos-imagen {
       }
       .product-label {
-        font-weight: bold; font-size: 14px; 
+        font-weight: bold; font-size: 14px; padding: 10px 0; display: block;
       }
-      .product-label, .link-read-more {padding: 10px 0; display: block}
+      .link-read-more {}
     }
   }
+}
+
+.show {
+  .sub-title {
+    .caption {
+      height: auto; padding: 10px 20px; 
+    }
+  }
+  .producto-imagen {@include makeColumn(4); position: relative; top: -80px; text-align: center}
+  .producto-detalles {@include makeColumn(8); position: relative; margin-top: 100px}
+  .linea-vertical {height: 80px; top: -90px}
+}
+
+.producto-benefit {
+  .producto-benefit-inner, .box-title {
+    padding: 20px;
+  }
+  .box-title {background: #ffc100; padding: 20px 20px 10px; font-size: $font-large; font-weight: 600}
+  .producto-benefit-inner {background: #f5f179; padding: 10px 20px 25px}
 }
 
 .slides .description {display: block}
