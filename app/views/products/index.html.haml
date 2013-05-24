@@ -27,16 +27,13 @@
     .product-description
       - @products.each do |product|
         .resumen-id.indexed
-          %h3.title        
+          %h3.title
             = product.name
             %span
               = product.description
 
           .productos-imagen
             = image_tag product.bottle_url(:thumb) if product.bottle?
-            = image_tag product.bottleback_url(:thumb) if product.bottleback?
-          
-           
 
 -#
     = product.description

@@ -17,7 +17,7 @@ class BottleUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "system/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -50,7 +50,7 @@ class BottleUploader < CarrierWave::Uploader::Base
   end
 
   version :blurred do
-    process blur: 3.0
+    process blur: '0.0x5.0'
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -92,7 +92,7 @@ class BottleUploader < CarrierWave::Uploader::Base
 
   def blur(blur_factor)
     manipulate! do |image|
-      image.radial_blur blur_factor
+      image.gaussian_blur(blur_factor)
       image
     end
   end

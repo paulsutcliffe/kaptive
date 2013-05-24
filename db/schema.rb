@@ -82,7 +82,6 @@ ActiveRecord::Schema.define(:version => 20130523012339) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "bottle"
-    t.string   "bottleback"
   end
 
 end
