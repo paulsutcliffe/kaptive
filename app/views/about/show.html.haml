@@ -1,22 +1,46 @@
-%p#notice= notice
 
-%p
-  %b Image
-  = image_tag @about.image_url if @about.image?
-%p
-  %b History:
-  = @about.history
-%p
-  %b Commitment:
-  = @about.commitment
-%p
-  %b Commitment Image
-  = image_tag @about.commitment_image_url if @about.commitment_image?
-%p
-  %b Vision:
-  = @about.vision
-%p
-  %b Mission:
-  = @about.mission
 
-= link_to 'Edit', edit_about_path(@about)
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'About us'
+
+  //- if current_admin
+  .administrate.create{:style => 'display: none'}
+    = link_to 'Edit', edit_about_path(@about), class: 'button button-update'
+
+
+
+%section.content
+  .content-inner
+    %figure.figure-about
+      = image_tag @about.image_url if @about.image?
+    .figcaption-about
+      %h3.title
+        .caption
+          Coca Leaf
+      %span.sub-title
+        .caption
+          The health benefits of the natural Coca-Leaf have been known for thousands of years.
+
+    .about-content.about-primary-content
+      .about-field
+        %h3 NWPI History
+        = paragraph(@about.history)
+    %figure.figure-about.aside
+      = image_tag @about.commitment_image_url if @about.commitment_image?
+    .about-content.about-secondary-content
+      .about-field
+        %h3 Our Commitment
+        = paragraph(@about.commitment)
+      .about-field
+        %h3 Visión
+        = paragraph(@about.vision)
+      .about-field
+        %h3 Misión
+        = paragraph(@about.mission)
+
+ 
+  
+
+

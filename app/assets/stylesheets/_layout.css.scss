@@ -163,6 +163,8 @@ footer#main-footer {
   }
 }
 
+#about.not-front #content header h2.page-title {padding-bottom: 20px}
+
 .our-brand {
   @include absolute(right, top, 40px, 540px);
 }
@@ -220,6 +222,33 @@ footer#main-footer {
   .box-title {background: #ffc100; padding: 20px 20px 10px; font-size: $font-large; font-weight: 600}
   .producto-benefit-inner {background: #f5f179; padding: 10px 20px 25px}
 }
+
+.figcaption-about {
+  @include absolute(right, top, 0px, 50px); width: 525px;
+  .sub-title {
+    .caption {font-size: $font-medium; text-transform: none; color: white}
+  }
+
+  
+}
+
+.figure-about.aside {
+    @include image-right
+  }
+
+  .about-content {
+    .about-field {padding-bottom: $row-bottom/2;
+      h3 {color: $orange; font-size: $font-large; padding-bottom: 10px}
+    }
+    &.about-primary-content {
+      padding-top: 20px;
+      h3 {font-size: $font-largest}
+      
+    }
+    &.about-secondary-content {
+      width: 620px; 
+    }
+  }
 
 .slides .description {display: block}
 
