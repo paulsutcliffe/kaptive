@@ -144,11 +144,11 @@ footer#main-footer {
 }
 
 .not-front #content {
-  padding-bottom: 0;
+  padding-bottom: 40px; // padding por contacto
   header {
     margin-left: 40px;
     h2.page-title {
-      text-transform: uppercase; font-weight: 600; padding-bottom: 70px;
+      text-transform: uppercase; font-weight: 600; padding-bottom: 35px;
       font-size: $font-largest; font-size: $font-heading-secondary;
       .caption {
         width: 290px; background: $yellow-2; padding: 15px 0 0 20px;
@@ -291,6 +291,30 @@ footer#main-footer {
 
 .content-header {padding-bottom: $row-bottom/2; float: left; clear: left; width: 100%;
   h2.page-title, .button-back {float: left; clear: left}
+
+}
+
+form {
+  .field, .actions {padding-bottom: 25px; width: $form-width}
+  .field {
+    label {@extend .label-default}
+    input[type="text"] {@extend .border; @extend .form-default}
+    textarea {@extend .border; @extend .form-default; height: 250px}
+  }
+  .actions {text-align: right; padding-bottom: 0;
+    input[type="submit"] {@extend .button-default}
+  }
+
+}
+#contacts form {padding-bottom: 65px}
+#contacts label, #contacts input, #contacts textarea {text-transform: uppercase}
+.form-instructions {color: black; font-size: $font-large; font-weight: 600}
+.contact-wrapper {margin-left: 45px;}
+.contact-address, .contact-info {padding-bottom: 30px; font-size: $font-large; line-height: 125%; 
+  }
+
+.contact-info {color: $green-2;
+ a {color: black}
 
 }
 

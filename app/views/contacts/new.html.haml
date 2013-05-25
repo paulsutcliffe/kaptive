@@ -1,8 +1,28 @@
-%h1 New contact
 
-= render 'form'
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Contact Us'
 
-= @metadata.address
-= @metadata.email
-= @metadata.web
-= @metadata.kaptive
+  - if current_admin
+    .administrate.create
+      = link_to 'Crear Noticia', new_news_path, class: 'btn btn-primary'
+
+.content
+  .content-inner
+    %p.form-instructions
+      If you have any question or requirements, please contact us using the form below.
+    .contact-wrapper
+      = render 'form'
+
+      .contact-address
+        = raw(@metadata.address)
+      .contact-info
+        Email:
+        = @metadata.email
+        %br
+        Website:
+        = @metadata.web
+        %br
+        Kaptive:
+        = @metadata.kaptive

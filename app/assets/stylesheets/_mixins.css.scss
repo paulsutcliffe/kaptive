@@ -29,6 +29,23 @@
     }
 }
 
+.border {
+  border: 5px solid $yellow-soft;
+}
+
+.label-default {
+  color: black; padding: 5px; font-size: $font-large; font-weight: 600; padding: 5px; 
+  font-size: 16px; font-weight: 600; margin: 0;
+}
+.form-default {
+  width: $form-width; min-width: $form-width; max-width: $form-width; height: auto; @extend .label-default;
+  @include box-sizing(border-box); 
+}
+.button-default {
+  background: $orange-2; color: white; padding: 6px 36px; text-transform: uppercase;
+  border: 0; font-size: $font-large; font-weight: bold;
+}
+
 
 
 
