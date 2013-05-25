@@ -52,6 +52,7 @@ gem "capistrano"
 
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: '49835a0d90'
 
+gem 'ckeditor', '3.4.2.pre'
 gem "auto_html"
 gem "nested_form"
 gem "rvm-capistrano"
