@@ -1,42 +1,42 @@
 - content_for :css do
-  = stylesheet_link_tag 'jquery-carousel-evolution/carousel.css'
+  = stylesheet_link_tag 'carousel.css'
 - content_for :javascript do
   = javascript_include_tag 'jquery-carousel-evolution/jquery-1.4.4.min.js', 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js'
   :javascript
     $(document).ready(function(){
       $('.carousel').carousel({
-        hAlign:'left', 
-        vAlign:'center', 
+        hAlign:'left',
+        vAlign:'center',
         hMargin:1.1,
-        vMargin:0.2, 
-        frontWidth:200, 
-        frontHeight:665, 
-        carouselWidth:1200, 
-        carouselHeight:750, 
-        left:0, 
-        right:0, 
-        top:0, 
-        bottom:0, 
-        backZoom:0.8, 
-        slidesPerScroll:5, 
-        speed:500, 
-        buttonNav:'none', 
+        vMargin:0.2,
+        frontWidth:200,
+        frontHeight:665,
+        carouselWidth:1200,
+        carouselHeight:750,
+        left:0,
+        right:0,
+        top:0,
+        bottom:0,
+        backZoom:0.8,
+        slidesPerScroll:5,
+        speed:500,
+        buttonNav:'none',
         directionNav:false,
-        autoplay:false, 
-        autoplayInterval:5000, 
-        pauseOnHover:true, 
-        mouse:false, 
-        shadow:false, 
-        reflection:true, 
-        reflectionHeight:0.2, 
-        reflectionOpacity:0.5, 
+        autoplay:false,
+        autoplayInterval:5000,
+        pauseOnHover:true,
+        mouse:false,
+        shadow:false,
+        reflection:true,
+        reflectionHeight:0.2,
+        reflectionOpacity:0.5,
         reflectionColor:'255,255,255',
         description:true, descriptionContainer:'.description',
         backOpacity:1,
-        before: function(carousel){}, 
+        before: function(carousel){},
         after: function(carousel){perform_bundle_hacks()}
 
-      });                              
+      });
       perform_bundle_hacks();
       primera_descripcion_visible();
     });
@@ -49,7 +49,7 @@
     function sincronizar_carousel_con_descripciones() {
       slides = $('.slides');
       descripciones = $('.product-description .indexed');
-      sincronizar_y_desvanecer(); 
+      sincronizar_y_desvanecer();
     }
 
     function primera_descripcion_visible() {
@@ -58,10 +58,10 @@
     }
     function sincronizar_y_desvanecer() {
       slide = slides.find('.indexed');
- 
+
       slide.click(function() {
          slide_index = $(this).index();
-         
+
          descripciones.hide();
          $('.product-description .indexed:eq(' + slide_index + ')').fadeIn();
       });
@@ -75,7 +75,7 @@
       blur_false = 'regular';
       blur = 'blurred';
       slides_list = slides.find('.indexed');
-      blur_first_image(); 
+      blur_first_image();
 
       slides_list.click(function() {
         current_slide = $(this).find('img');
