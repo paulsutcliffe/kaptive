@@ -91,7 +91,8 @@ footer#main-footer {
     ul {
       @include menu; 
       li { margin-left: 22px;
-        span {color: $gray}
+        span,
+        a:hover {color: white}
         &.close-session {display: none}
       }
     }
@@ -327,8 +328,8 @@ form {
 body[id^="devise"] br {display: none}
 
 
-
-.carousel-inner {width: 795px; margin: 0 auto;
+#productsCarousel {width: 400px; margin: 0; position: absolute; top: 0; right: 0}
+.carousel-inner {width: 400px; margin: 0 auto;
   .thumbnails {margin: 0; padding-top: 8px;
     li {margin-left: 0px; padding-left: 20px; width: 236px;
       &:hover {}
@@ -336,6 +337,9 @@ body[id^="devise"] br {display: none}
         @include transition1;
       }
       h3 {text-align: center; @include text-heavy}
+      &.img-slice {
+         width: 55px
+       }
     }
   }
 }
@@ -346,3 +350,5 @@ body[id^="devise"] br {display: none}
     margin-left: 100px
   }
 }
+
+

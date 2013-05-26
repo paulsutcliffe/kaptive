@@ -1,0 +1,18 @@
+
+
+
+#productsCarousel.carousel.slide
+  <!-- Carousel items -->
+  .carousel-inner
+    - @bottles.each_slice(6) do |slice|
+      .item
+        %ul.thumbnails
+          - slice.each do |bottle|
+            %li.img-slice
+              = link_to image_tag(bottle.bottle_url(:little)), product_url(bottle)
+
+  <!-- Carousel nav -->
+  = link_to '<', '#productsCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
+  = link_to '>', '#productsCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
+
+
