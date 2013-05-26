@@ -51,6 +51,7 @@ gem "capistrano"
 # gem 'debugger'
 
 gem "ckeditor"
+gem "activerecord"
 gem "auto_html"
 gem "nested_form"
 gem "rvm-capistrano"

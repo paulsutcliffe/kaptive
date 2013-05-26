@@ -211,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   auto_html
   bootstrap-sass (~> 2.3.1.0)
   capistrano
