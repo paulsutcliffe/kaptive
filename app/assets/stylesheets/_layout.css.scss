@@ -190,7 +190,7 @@ footer#main-footer {
 }
 
 .product-description {
-  @include absolute(left, top, 240px, 310px); z-index: 50;
+  @include absolute(left, top, 340px, 310px); z-index: 50;
   .resumen-id {
     @include absolute(left, top, 0px, 0px); 
     .resumen-content {
@@ -341,4 +341,8 @@ body[id^="devise"] br {display: none}
 }
 .carousel-control {background: none; color: $gray; font-weight:600; top: 120px}
 
-
+#products .carousel {
+  .slides {
+    margin-left: 100px
+  }
+}
