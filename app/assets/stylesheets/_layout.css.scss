@@ -87,10 +87,10 @@ footer#main-footer {
   
 
   nav.secondary-menu {
-    right: 455px;
+    right: 415px;
     ul {
       @include menu; 
-      li { margin-left: 25px;
+      li { margin-left: 22px;
         span {color: $gray}
         &.close-session {display: none}
       }
@@ -98,14 +98,14 @@ footer#main-footer {
   }
 
   .call-us {
-    right: 205px; color: $gray-light;
+    right: 165px; color: $gray-light;
     b {
       color: white;
     }
   }
 
   .social-links.follow {
-    right: 85px;
+    right: 45px;
     @include inline-block-right(15px);
   }
 
@@ -327,5 +327,18 @@ form {
 body[id^="devise"] br {display: none}
 
 
+
+.carousel-inner {width: 795px; margin: 0 auto;
+  .thumbnails {margin: 0; padding-top: 8px;
+    li {margin-left: 0px; padding-left: 20px; width: 236px;
+      &:hover {}
+      img {
+        @include transition1;
+      }
+      h3 {text-align: center; @include text-heavy}
+    }
+  }
+}
+.carousel-control {background: none; color: $gray; font-weight:600; top: 120px}
 
 
