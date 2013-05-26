@@ -1,4 +1,5 @@
-
+- content_for :css do
+  = stylesheet_link_tag 'jquery-carousel-evolution/carousel.css'
 - content_for :javascript do
   = javascript_include_tag 'jquery-carousel-evolution/jquery-1.4.4.min.js', 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js'
   :javascript
@@ -10,7 +11,7 @@
         vMargin:0.2,
         frontWidth:200,
         frontHeight:665,
-        carouselWidth:700,
+        carouselWidth:1200,
         carouselHeight:750,
         left:0,
         right:0,
