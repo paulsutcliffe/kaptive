@@ -1,3 +1,6 @@
+= content_for :javascript do
+  = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
+
 %h1 Editing metadatum
 
 = render 'form'

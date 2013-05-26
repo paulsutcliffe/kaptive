@@ -15,9 +15,9 @@
     %li.last
       = link_to_unless_current 'Contacts', contacts_path do
         %span Contacts
-    %li
-    = link_to_unless_current 'Close Session', destroy_admin_session_path, method: :delete do
-      %span Close Session
+    %li.close-session
+      = link_to 'Close Session', destroy_admin_session_path, method: :delete
+        
   - else
     %li.first
       = link_to_unless_current 'Home', root_path do
@@ -31,9 +31,8 @@
     %li
       = link_to_unless_current 'News', news_index_path do
         %span News
-    %li.last
+    %li
       = link_to_unless_current 'Contact', new_contact_path do
         %span Contact
     %li.last
-      = link_to_unless_current 'Store Locator', '#' do
-        %span Store Locator
+      = link_to 'Store Locator', '#', :target => '_blank'

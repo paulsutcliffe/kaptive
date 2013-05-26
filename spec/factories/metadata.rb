@@ -8,11 +8,11 @@ FactoryGirl.define do
     email "info@nworldp.com"
     web "www.nworldp.com"
     kaptive "www.mykaptive"
-    address "New World Products and Beverage Ltd.
-    2nd Floor
-    The Crescent Building
-    Northwood, Santry
-    Dublin 9
+    address "<strong>New World Products and Beverage Ltd.</strong><br />
+    2nd Floor<br />
+    The Crescent Building<br />
+    Northwood, Santry<br />
+    Dublin 9<br />
     Republic of Ireland"
     logo { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec', 'support', 'images', 'logo.png')) }
   end

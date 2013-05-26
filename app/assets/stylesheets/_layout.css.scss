@@ -84,13 +84,15 @@ footer#main-footer {
       #autor {text-align: right}
     }
   }
+  
 
   nav.secondary-menu {
     right: 455px;
     ul {
-      @include menu;
-      li {
+      @include menu; 
+      li { margin-left: 25px;
         span {color: $gray}
+        &.close-session {display: none}
       }
     }
   }
@@ -300,6 +302,9 @@ form {
     label {@extend .label-default}
     input[type="text"] {@extend .border; @extend .form-default}
     textarea {@extend .border; @extend .form-default; height: 250px}
+    &.ckeditor {
+      width: auto
+    }
   }
   .actions {text-align: right; padding-bottom: 0;
     input[type="submit"] {@extend .button-default}
