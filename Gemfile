@@ -7,7 +7,6 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -47,10 +46,6 @@ gem "unicorn"
 # Deploy with Capistrano
 gem "capistrano"
 
-# To use debugger
-# gem 'debugger'
-
-gem "auto_html"
 gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"
@@ -62,4 +57,3 @@ gem "friendly_id", "~> 4.0.9"
 gem "devise"
 gem 'mini_magick'
 gem "carrierwave"
-gem "will_paginate"
