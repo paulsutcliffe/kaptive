@@ -1,23 +1,31 @@
-%h1 Listing contacts
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Messages received'
+  %span.crud-date
+    %span.created_at
+      Last message received at:
+      = l @last_contact.created_at, :format => :long
 
-%table
-  %tr
-    %th Name
-    %th Email
-    %th Message
-    %th
-    %th
-    %th
-
-  - @contacts.each do |contact|
-    %tr
-      %td= contact.name
-      %td= contact.email
-      %td= contact.message
-      %td= link_to 'Show', contact
-      %td= link_to 'Edit', edit_contact_path(contact)
-      %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Contact', new_contact_path
+.content
+  .content-inner
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th.table-name Name
+          %th.table-email Email
+          %th.table-date Date
+          %th.table-crud
+          %th.table-crud
+          %th.table-crud
+    
+      %tbody
+        - @contacts.each do |contact|
+          %tr
+            %td.table-name= contact.name
+            %td.table-email= contact.email
+            %td.table-date= l contact.created_at, :format => :long
+            %td= link_to 'Show', contact, :class => 'button button-show'
+            %td= link_to 'Edit', edit_contact_path(contact), :class => 'button button-update'
+            %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button button-delete'
+    

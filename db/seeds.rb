@@ -6,11 +6,11 @@ DatabaseCleaner.strategy = :truncation
 # then, whenever you need to clean the DB
 DatabaseCleaner.clean
 
-7.times do
+10.times do
   FactoryGirl.create :product
 end
 
-3.times do
+10.times do
   FactoryGirl.create :news
 end
 

@@ -1,8 +1,20 @@
-= content_for :javascript do
-  = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
 
-%h1 Editing metadatum
 
-= render 'form'
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Edit metadatum'
+  %span.crud-date
+    %span.updated_at
+      Last update:
+      = l @metadatum.updated_at, :format => :long
+  
 
-= link_to 'Show', @metadatum
+.content
+  .content-inner
+    = render 'form'
+
+
+
+
+

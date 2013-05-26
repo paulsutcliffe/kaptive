@@ -4,6 +4,8 @@ $bg-hojas:                       url(bg-leafes-left.png) no-repeat 0px 0 , url(b
 $bg-hojas-pie:                   url(/assets/bg-leafes-left.png) no-repeat 0px 0 , url(/assets/bg-leafes-right.png) no-repeat 100% 0 white;
 $bg-bottles:                     url(bg-multiple-bottles.png) no-repeat 0 100%;
 $raya-1:                         url(raya-1.png) no-repeat 0 0;
+$bottle-hover:                   url(bottle-hover.png) no-repeat 20px 5px;
+
 
 // spaces
 $row-top:                        30px;
@@ -16,6 +18,7 @@ $header-height:                  155px;
 
 // typography
 $font-open-sans:                 'Open Sans', sans-serif;
+$font-helvetica:                 "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 // font-sizes
 $font-tiny:                      11px;
@@ -43,4 +46,7 @@ $orange:                         #f95f34;
 $orange-2:                       #fa5e35;
 $green:                          #169102;
 $green-2:                        #46811a;
+$green-3:                        #b0c366;
+$green-4:                        #6fb200;
+$green-5:                        #478000;
 

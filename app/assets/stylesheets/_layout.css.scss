@@ -7,7 +7,7 @@ line-height: 100%; font-weight: 300; font-family: $font-open-sans}
 h2.page-title, .title, .sub-title {color: white; @include inline-block;
 line-height: 115%; text-transform: uppercase }
 ul, ol, dl, p {margin: 0} li {list-style: none}
-p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px}
+p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px; color: $gray-1}
 figure {margin: 0}
 section {padding-bottom: $row-bottom;}
 
@@ -155,6 +155,9 @@ footer#main-footer {
       font-size: $font-largest; font-size: $font-heading-secondary;
       .caption {
         width: 290px; background: $yellow-2; padding: 15px 0 0 20px;
+        b {
+         font-weight: 600
+         }
       }
     }
   }
@@ -165,8 +168,11 @@ footer#main-footer {
     }
   }
 }
+.not-front.edit #content header h2.page-title .caption {width: auto; padding-right: 20px; color: $gray;
+  b {color: black}
+}
 
-#about.not-front #content header h2.page-title {padding-bottom: 20px}
+#about.show #content header h2.page-title {padding-bottom: 20px}
 
 .our-brand {
   @include absolute(right, top, 40px, 540px);
@@ -180,7 +186,12 @@ footer#main-footer {
   h3 {}
   p {}
   .link.link-read-more {
-    color: $green;
+    color: $green; font-size: $font-medium
+  }
+
+  #news & {
+    padding-bottom: $row-bottom;
+    h3 { padding: 12px 0 16px; a {font-size: $font-large; font-weight: 600; color: $gray-1}}
   }
 }
 
@@ -189,6 +200,9 @@ footer#main-footer {
   .linea-horizontal {@include size(120px, 6px); @include absolute(right, top, 0, 0); background: $yellow-3}
   
 }
+
+.break {clear: left}
+.hidden {visibility: hidden; opacity: 0; filter: alpha(opacity=0)}
 
 .product-description {
   @include absolute(left, top, 340px, 310px); z-index: 50;
@@ -281,9 +295,8 @@ footer#main-footer {
     @extend .btn-warning;
   }
   &.button-back {
-  //  @extend .btn;
-  // @extend .btn-info;
-  @include button;
+    @extend .btn;
+    @extend .btn-info;
   }
   &.button-show {
     @extend .btn;
@@ -328,27 +341,64 @@ form {
 body[id^="devise"] br {display: none}
 
 
-#productsCarousel {width: 400px; margin: 0; position: absolute; top: 0; right: 0}
-.carousel-inner {width: 400px; margin: 0 auto;
-  .thumbnails {margin: 0; padding-top: 8px;
-    li {margin-left: 0px; padding-left: 20px; width: 236px;
-      &:hover {}
-      img {
-        @include transition1;
+#productsCarousel {margin: 0; @include inline-block; @include absolute(top, right, 0, 0);
+  .carousel-inner {width: 470px; height: 200px; margin: 0 auto; padding: 0 40px;
+    .thumbnails {margin: 0; padding-top: 8px;
+      li {margin-left: 0px; padding-left: 20px; width: 236px;
+        &:hover {}
+        img {
+          @include transition1;
+        }
+        h3 {text-align: center; @include text-heavy}
+        &.img-slice {background:$bottle-hover;
+           width: 55px;
+            img:hover {
+              opacity: 0
+            }
+         }
       }
-      h3 {text-align: center; @include text-heavy}
-      &.img-slice {
-         width: 55px
-       }
     }
   }
 }
-.carousel-control {background: none; color: $gray; font-weight:600; top: 120px}
+.carousel-control {background: transparent; font-family: $font-helvetica; border: 0; top: 80px; margin:0; color: $green;
+  &:hover, &:visited {color: $green-2}
+}
 
 #products .carousel {
   .slides {
     margin-left: 100px
   }
 }
+#products.show {
+  .content {
+    margin-top: 100px
+  }
+}
 
+.crud-date {display: block; position: relative; top: -30px;
+  span {margin-right: 10px}
+}
 
+#contacts {
+  table {
+    width: 100%; background: white;
+    thead {
+     /* .table-name {background: $green-4}
+      .table-email {background: $green-3}
+      .table-date {background: $green-5}
+      .table-crud {background: $green}*/
+    } 
+
+    tbody {
+      tr {
+        &:hover {}
+      }
+    }
+  }
+}
+
+.message-original {color: $green}
+.message-updated-at{
+  color: orange; font-weight: bold
+
+}

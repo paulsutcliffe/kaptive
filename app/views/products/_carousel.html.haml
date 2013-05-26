@@ -9,10 +9,15 @@
         %ul.thumbnails
           - slice.each do |bottle|
             %li.img-slice
-              = link_to image_tag(bottle.bottle_url(:little)), product_url(bottle)
+              = link_to_unless_current image_tag(bottle.bottle_url(:little)), product_url(bottle) do
+                = image_tag(bottle.bottle_url(:little), :class => 'hidden')
 
   <!-- Carousel nav -->
   = link_to '<', '#productsCarousel', :"data-slide" => 'prev', :class => 'carousel-control left'
   = link_to '>', '#productsCarousel', :"data-slide" => 'next', :class => 'carousel-control right'
 
+:javascript
+  $(document).ready(function() {
+    $('.carousel-inner .item:eq(0)').addClass('active');
+  });
 

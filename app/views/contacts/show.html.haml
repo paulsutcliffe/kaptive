@@ -1,15 +1,54 @@
-%p#notice= notice
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Contact'
 
-%p
-  %b Name:
-  = @contact.name
-%p
-  %b Email:
-  = @contact.email
-%p
-  %b Message:
-  = @contact.message
+  - if current_admin
+    .administrate.create
+      = link_to 'Edit', edit_contact_path(@contact), class: 'button button-update'
+      = link_to 'Back', contacts_path, class: 'button button-back'
+      = link_to 'Destroy', @contact, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button button-delete'
+    
 
-= link_to 'Edit', edit_contact_path(@contact)
-\|
-= link_to 'Back', contacts_path
+
+%section.content
+  .content-inner
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %td{colspan: 2}
+            %b
+              MENSAJE
+      %tbody 
+        %tr
+          %td{colspan: 2}
+            %b
+              Name:
+            = @contact.name
+        
+        %tr
+          %td
+            %b 
+              Email:
+            = @contact.email
+          %td
+            %b
+              Fecha
+            = l @contact.created_at, :format => :long
+        %tr
+          %td{colspan: 2}
+            %b
+              Message:
+            = @contact.message
+
+    - if @contact.created_at == @contact.updated_at
+      %span.message-original
+        %span
+          Mensaje sin editar
+    - else
+      %span.message-updated-at
+        %span
+          Mensaje editado
+        = l @contact.updated_at, :format => :long
+      
+      

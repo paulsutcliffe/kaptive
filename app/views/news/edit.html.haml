@@ -1,7 +1,24 @@
-%h1 Editing news
+- page_title! 'Edit news ' + @news.title
 
-= render 'form'
+%header
+  %h2.page-title
+    .caption
+      Edit news 
+      = content_tag(:b, @news.title)
+  %span.crud-date
+    %span.created_at
+      Product created at:
+      = l @news.created_at, :format => :long
+    %span.updated_at
+      Last update:
+      = l @news.updated_at, :format => :long
+  
+  .administrate.create
+    = link_to 'Back', news_index_path, class: 'btn btn-back'
+    = link_to 'Show', @news, class: 'btn btn-show'
 
-= link_to 'Show', @news
-\|
-= link_to 'Back', news_index_path
+.content
+  .content-inner
+    = render 'form'
+
+

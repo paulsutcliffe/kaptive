@@ -1,10 +1,18 @@
 = content_for :javascript do
   = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
 
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'New product'
+
+  
+  .administrate.create
+    = link_to 'Back', products_path, class: 'btn btn-back'
 
 
-%h1 New product
+.content
+  .content-inner
+    = render 'form'
 
-= render 'form'
-
-= link_to 'Back', products_path
+    

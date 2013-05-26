@@ -7,9 +7,9 @@
     .caption
       = page_title! 'Productos'
 
-  //- if current_admin
-  .administrate.create{:style => 'display: none'}
-    = link_to 'Crear Producto', new_product_path, class: 'btn btn-primary'
+  - if current_admin
+    .administrate.create{:style => 'display: none'}
+      = link_to 'Crear Producto', new_product_path, class: 'btn btn-primary'
 
 
 

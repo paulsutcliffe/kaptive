@@ -3,7 +3,7 @@
 %header
   %h2.page-title
     .caption
-      = page_title! 'News'
+      News
 
   //- if current_admin
   .administrate.create{:style => 'display: none'}
@@ -14,7 +14,7 @@
 %section.content
   .content-inner
     %h2.title
-      = @news.title
+      = page_title! @news.title
     .news-headline
       = paragraph(@news.headline)
 
@@ -22,4 +22,4 @@
       %figure.news-figure
         = image_tag @news.image_url(:show) if @news.image?
       = paragraph(@news.content)
-
+    = link_to 'Back', news_index_path, :class => 'button button-back'

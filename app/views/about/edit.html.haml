@@ -1,7 +1,17 @@
-%h1 Editing about
 
-= render 'form'
 
-= link_to 'Show', @about
-\|
-= link_to 'Back', about_index_path
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Edit metadata'
+  %span.crud-date
+    %span.updated_at
+      Last update:
+      = l @about.updated_at, :format => :long
+  
+
+.content
+  .content-inner
+    = render 'form'
+
+

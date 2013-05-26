@@ -4,9 +4,9 @@
     .caption
       = page_title! 'News'
 
-  //- if current_admin
-  .administrate.create
-    = link_to 'Crear Noticia', new_news_path, class: 'btn btn-primary'
+  - if current_admin
+    .administrate.create
+      = link_to 'Create New', new_news_path, class: 'btn btn-primary'
 
 .content
   .content-inner
@@ -18,16 +18,18 @@
         As a company, NWPI seek long lasting and strong relationships with our media partners. Our objective is to work together to build an environmentally friendly culture: full of wellness.
 
     - @news.each do |news|
-      .resumen-id
-        = image_tag news.image_url(:thumb) if news.image?
+      %div{:class => 'resumen-id ' + cycle('break', '', '')}
+        - if news.image?
+          = link_to image_tag(news.image_url(:thumb)), news
         %h3
-          = news.title
+          = link_to news.title, news
         %p
           = truncate(news.content, :length => 145)
         = link_to 'Read more', news, class: 'link link-read-more'
-        .administrate.iterate
-          = link_to 'Show', news
-          = link_to 'Edit', edit_news_path(news)
-          = link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        - if current_admin
+          .administrate.iterate
+            = link_to 'Show', news, class: 'button button-show'
+            = link_to 'Edit', edit_news_path(news), class: 'button button-update'
+            = link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'button button-delete'
 
 

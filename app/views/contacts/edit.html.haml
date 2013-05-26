@@ -1,7 +1,18 @@
-%h1 Editing contact
 
-= render 'form'
 
-= link_to 'Show', @contact
-\|
-= link_to 'Back', contacts_path
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Edit contact'
+  %span.crud-date
+    %span.updated_at
+      Last update:
+      = l @contact.updated_at, :format => :long
+  
+
+.content
+  .content-inner
+    = render 'form'
+
+
+

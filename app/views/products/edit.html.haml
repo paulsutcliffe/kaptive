@@ -1,10 +1,28 @@
 = content_for :javascript do
   = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
 
-%h1 Editing product
+- page_title! 'Edit product ' + @product.name
 
-= render 'form'
+%header
+  %h2.page-title
+    .caption
+      Edit product 
+      = content_tag(:b, @product.name)
+  %span.crud-date
+    %span.created_at
+      Product created at:
+      = l @product.created_at, :format => :long
+    %span.updated_at
+      Last update:
+      = l @product.updated_at, :format => :long
+  
+  .administrate.create
+    = link_to 'Back', products_path, class: 'btn btn-back'
+    = link_to 'Show', @product, class: 'btn btn-show'
 
-= link_to 'Show', @product
-\|
-= link_to 'Back', products_path
+.content
+  .content-inner
+    = render 'form'
+
+
+
