@@ -50,8 +50,7 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem 'ckeditor', '3.4.2.pre'
-gem "paperclip"
+gem "ckeditor"
 gem "auto_html"
 gem "nested_form"
 gem "rvm-capistrano"
