@@ -18,6 +18,3 @@
 // Loads all Bootstrap javascripts
 //= require bootstrap-transition
 //= require bootstrap-carousel
-//
-// Ckeditor Init
-//= require ckeditor/init
