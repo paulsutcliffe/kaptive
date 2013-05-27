@@ -39,7 +39,7 @@
           .resumen-content
             .productos-imagen
               = image_tag product.bottle_url(:thumb) if product.bottle?
-            
+
             .productos-preview
               %span.product-label
                 Our brand
@@ -47,15 +47,5 @@
                 = truncate(product.preview, length: 100)
 
             = link_to 'Read more', product, :class => 'link link-read-more'
-
--#
-    = product.description
-  = product.content
-  = product.preview
-  = image_tag product.bottle_url(:thumb) if product.bottle?
-  = image_tag product.bottleback_url(:thumb) if product.bottleback?
-  = link_to 'Show', product
-  = link_to 'Edit', edit_product_path(product)
-  = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 
