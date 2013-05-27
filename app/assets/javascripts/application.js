@@ -18,4 +18,4 @@
 //= require bootstrap-transition
 //= require bootstrap-carousel
 //
-//= require_tree jquery-carousel-evolution
+//= require_directory ./jquery-carousel-evolution
