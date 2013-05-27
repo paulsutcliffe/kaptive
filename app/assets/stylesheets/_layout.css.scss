@@ -407,7 +407,7 @@ body[id^="devise"] br {display: none}
     }
   }
 }
-
+#products.show .alert-container .alert {width: 400px}
 .message-original {color: $green}
 .message-updated-at{
   color: orange; font-weight: bold
