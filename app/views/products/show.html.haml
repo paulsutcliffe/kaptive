@@ -7,7 +7,7 @@
     .administrate.create
       = link_to 'New Product', edit_product_path(@product), class: 'button button-create'
       = link_to 'Edit', edit_product_path(@product), class: 'button button-update'
-      = link_to 'Delete', edit_product_path(@product), class: 'button button-delete'
+      = link_to 'Delete', @product, method: :delete, class: 'button button-delete'
 
   = render 'carousel'
 
@@ -19,7 +19,7 @@
       .linea-horizontal
     %h3.title
       .caption
-        = truncate(@product.name, length: 25)
+        = truncate(@product.name, length: 24)
     %span.sub-title
       .caption
         = paragraph(@product.description)
@@ -33,6 +33,6 @@
 
 
 
-  
+
 
 

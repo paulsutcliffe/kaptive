@@ -20,12 +20,12 @@ h2.page-title, .title {
   .caption {
     background: $yellow; line-height: 100%; @extend .captioned;
   }
-  
+
 }
 .sub-title {
   padding: 10px;
   .caption {
-    background: $orange; line-height: 100%; @include inline-block; @extend .captioned; 
+    background: $orange; line-height: 100%; @include inline-block; @extend .captioned;
     font-size: $font-heading-secondary; margin-left: 55px; color: black;
     p {color: white; padding: 0}
   }
@@ -86,12 +86,12 @@ footer#main-footer {
       #autor {text-align: right}
     }
   }
-  
+
 
   nav.secondary-menu {
     right: 415px;
     ul {
-      @include menu; 
+      @include menu;
       li { margin-left: 20px;
         span,
         span:hover,
@@ -168,7 +168,7 @@ footer#main-footer {
 
   .content {
     .content-inner {
-      width: 900px; margin-left: 60px; 
+      width: 900px; margin-left: 60px;
     }
   }
 }
@@ -186,7 +186,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .resumen-id {
   width: 255px; float: left; margin-right: 30px;
   .title {
-     background: $raya-1; 
+     background: $raya-1;
       span {}
   }
   h3 {}
@@ -204,7 +204,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .linea-vertical {@include size(6px, 155px); background: $yellow-3;
   @include absolute(left, top, 30px, -170px);
   .linea-horizontal {@include size(120px, 6px); @include absolute(right, top, 0, 0); background: $yellow-3}
-  
+
 }
 
 .break {clear: left}
@@ -213,9 +213,9 @@ body[id^="devise"] #content header h2.page-title .caption,
 .product-description {
   @include absolute(left, top, 340px, 310px); z-index: 50;
   .resumen-id {
-    @include absolute(left, top, 0px, 0px); 
+    @include absolute(left, top, 0px, 0px);
     .resumen-content {
-      
+
       margin-left: 185px; width: 285px;
       .productos-imagen {
       }
@@ -230,7 +230,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .show {
   .sub-title {
     .caption {
-      height: auto; padding: 10px 20px; 
+      height: auto; padding: 10px 20px;
     }
   }
   .producto-imagen {@include makeColumn(4); position: relative; top: -80px; text-align: center}
@@ -252,7 +252,7 @@ body[id^="devise"] #content header h2.page-title .caption,
     .caption {font-size: $font-medium; text-transform: none; color: white}
   }
 
-  
+
 }
 
 .figure-about.aside {
@@ -266,10 +266,10 @@ body[id^="devise"] #content header h2.page-title .caption,
     &.about-primary-content {
       padding-top: 20px;
       h3 {font-size: $font-largest}
-      
+
     }
     &.about-secondary-content {
-      width: 620px; 
+      width: 620px;
     }
   }
 
@@ -339,7 +339,7 @@ form {
 #contacts label, #contacts input, #contacts textarea {text-transform: uppercase}
 .form-instructions {color: black; font-size: $font-large; font-weight: 600}
 .contact-wrapper {margin-left: 45px;}
-.contact-address, .contact-info {padding-bottom: 30px; font-size: $font-large; line-height: 125%; 
+.contact-address, .contact-info {padding-bottom: 30px; font-size: $font-large; line-height: 125%;
   }
 
 .contact-info {color: $green-2;
@@ -351,7 +351,7 @@ form {
 body[id^="devise"] br {display: none}
 
 
-#productsCarousel {margin: 0; @include inline-block; @include absolute(top, right, 0, 0);
+#productsCarousel {width: 550px; margin: 0; @include inline-block; @include absolute(top, right, 50px, 0);
   .carousel-inner {width: 470px; height: 200px; margin: 0 auto; padding: 0 40px;
     .thumbnails {margin: 0; padding-top: 8px;
       li {margin-left: 0px; padding-left: 20px; width: 236px;
@@ -398,7 +398,7 @@ body[id^="devise"] br {display: none}
       .table-email {background: $green-3}
       .table-date {background: $green-5}
       .table-crud {background: $green}*/
-    } 
+    }
 
     tbody {
       tr {
@@ -407,7 +407,7 @@ body[id^="devise"] br {display: none}
     }
   }
 }
-#products.show .alert-container .alert {width: 400px}
+#products.show .alert-container .alert
 .message-original {color: $green}
 .message-updated-at{
   color: orange; font-weight: bold
