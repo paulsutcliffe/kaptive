@@ -78,14 +78,14 @@ class BottleUploader < CarrierWave::Uploader::Base
   # Resize and crop square from Center
   def resize_and_crop(size)
     manipulate! do |image|
-      if image[:width] < image[:height]
-        remove = ((image[:height] - image[:width])/2).round
-        image.shave("0x#{remove}")
-      elsif image[:width] > image[:height]
-        remove = ((image[:width] - image[:height])/2).round
-        image.shave("#{remove}x0")
-      end
+      cutheight = ((image[:height])/2).round
+      cutwidth = ((image[:width])/3).round
+      cropwidth = cutwidth*2
+      image.crop("#{cropwidth}x#{cropwidth}+#{cutwidth}+#{cutheight}")
       image.resize("#{size}x#{size}")
+      image.background '#FFFFFF'
+      image.alpha 'remove'
+      image.format 'jpg'
       image
     end
   end

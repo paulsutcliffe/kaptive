@@ -6,8 +6,9 @@
 %header
   %h2.page-title
     .caption
-      Edit product 
-      = content_tag(:b, @product.name)
+      Edit product
+      %b
+        = truncate(@product.name, length: 50)
   %span.crud-date
     %span.created_at
       Product created at:
@@ -15,7 +16,7 @@
     %span.updated_at
       Last update:
       = l @product.updated_at, :format => :long
-  
+
   .administrate.create
     = link_to 'Back', products_path, class: 'btn btn-back'
     = link_to 'Show', @product, class: 'btn btn-show'

@@ -4,4 +4,6 @@ class Product < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :name, use: :slugged
+
+  validates :content, :descrition, :name, :preview, :bottle, :presence => true
 end
