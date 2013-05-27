@@ -35,4 +35,4 @@
       = link_to_unless_current 'Contact', new_contact_path do
         %span Contact
     %li.last
-      = link_to 'Store Locator', '#', :target => '_blank'
+      = link_to 'Store Locator', @metadata.store_locator, :target => '_blank'

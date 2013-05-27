@@ -35,6 +35,8 @@ h2.page-title, .title {
 
 }
 
+.front .caption {white-space: nowrap}
+
 
 header#main-header {
   position: relative;
@@ -90,9 +92,11 @@ footer#main-footer {
     right: 415px;
     ul {
       @include menu; 
-      li { margin-left: 22px;
+      li { margin-left: 20px;
         span,
+        span:hover,
         a:hover {color: white}
+        &.first {margin-left: 0}
         &.close-session {display: none}
       }
     }
@@ -168,6 +172,8 @@ footer#main-footer {
     }
   }
 }
+
+body[id^="devise"] #content header h2.page-title .caption,
 .not-front.edit #content header h2.page-title .caption {width: auto; padding-right: 20px; color: $gray;
   b {color: black}
 }
@@ -302,6 +308,10 @@ footer#main-footer {
     @extend .btn;
     @extend .btn-info;
   }
+  &.button-devise {
+    @extend .btn;
+    @extend .btn-info;
+  }
 
 }
 
@@ -314,7 +324,7 @@ form {
   .field, .actions {padding-bottom: 25px; width: $form-width}
   .field {
     label {@extend .label-default}
-    input[type="text"] {@extend .border; @extend .form-default}
+    input[type="text"], input[type="password"], input[type="email"] {@extend .border; @extend .form-default}
     textarea {@extend .border; @extend .form-default; height: 250px}
     &.ckeditor {
       width: auto
@@ -361,7 +371,8 @@ body[id^="devise"] br {display: none}
   }
 }
 .carousel-control {background: transparent; font-family: $font-helvetica; border: 0; top: 80px; margin:0; color: $green;
-  &:hover, &:visited {color: $green-2}
+  outline: 0;
+  &:hover, &:visited, &:focus {color: $green-2}
 }
 
 #products .carousel {
@@ -402,3 +413,7 @@ body[id^="devise"] br {display: none}
   color: orange; font-weight: bold
 
 }
+
+.table-bordered td b {float: left; width: 100px}
+.campo-tabla {overflow: hidden}
+.table-bordered th, .table-bordered td {background: white}

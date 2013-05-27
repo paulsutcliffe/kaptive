@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524235408) do
+ActiveRecord::Schema.define(:version => 20130527014737) do
 
   create_table "about", :force => true do |t|
     t.text     "history"
@@ -76,9 +76,10 @@ ActiveRecord::Schema.define(:version => 20130524235408) do
     t.string   "web"
     t.string   "kaptive"
     t.text     "address"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "logo"
+    t.string   "store_locator"
   end
 
   create_table "news", :force => true do |t|

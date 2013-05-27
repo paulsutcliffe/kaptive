@@ -1,8 +1,17 @@
-= content_for :javascript do
-  = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
 
-%h1 New metadatum
 
-= render 'form'
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Create metadatum'
+  
 
-= link_to 'Back', metadata_path
+.content
+  .content-inner
+    = render 'form'
+
+
+
+
+
+

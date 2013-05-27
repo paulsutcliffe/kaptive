@@ -24,7 +24,8 @@
           %td{colspan: 2}
             %b
               Name:
-            = @contact.name
+            .campo-tabla
+              = @contact.name
         
         %tr
           %td
@@ -39,7 +40,8 @@
           %td{colspan: 2}
             %b
               Message:
-            = @contact.message
+            .campo-tabla
+              = @contact.message
 
     - if @contact.created_at == @contact.updated_at
       %span.message-original

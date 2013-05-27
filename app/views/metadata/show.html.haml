@@ -1,28 +1,61 @@
-%p#notice= notice
 
-%p
-  %b Logo:
-  = image_tag @metadatum.logo_url(:small) if @metadatum.logo?
-%p
-  %b Phone:
-  = @metadatum.phone
-%p
-  %b Facebook:
-  = @metadatum.facebook
-%p
-  %b Twitter:
-  = @metadatum.twitter
-%p
-  %b Email:
-  = @metadatum.email
-%p
-  %b Web:
-  = @metadatum.web
-%p
-  %b Kaptive:
-  = @metadatum.kaptive
-%p
-  %b Address:
-  = @metadatum.address
 
-= link_to 'Edit', edit_metadatum_path(@metadatum)
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Metadatum'
+  %span.crud-date
+    %span.updated_at
+      Last update:
+      = l @metadatum.updated_at, :format => :long
+  .administrate.create
+    = link_to 'Edit', edit_metadatum_path(@metadatum), class: 'button button-update' 
+
+.content
+  .content-inner
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %td{colspan: 2}
+            %b
+              LOGO
+      %tbody 
+        %tr
+          %td
+            = image_tag @metadatum.logo_url(:small) if @metadatum.logo?
+        %tr
+          %td
+            %b Phone:
+            .campo-tabla
+              = @metadatum.phone
+        %tr
+          %td
+            %b Facebook:
+            .campo-tabla
+              = @metadatum.facebook
+        %tr
+          %td
+            %b Twitter:
+            .campo-tabla
+              = @metadatum.twitter
+        %tr
+          %td
+            %b Email:
+            .campo-tabla
+              = @metadatum.email
+        %tr
+          %td
+            %b Web:
+            .campo-tabla
+              = @metadatum.web
+        %tr
+          %td
+            %b Kaptive:
+            .campo-tabla
+              = @metadatum.kaptive
+        %tr
+          %td
+            %b Address:
+            .campo-tabla
+              = raw(@metadatum.address)
+        

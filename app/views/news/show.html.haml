@@ -5,9 +5,9 @@
     .caption
       News
 
-  //- if current_admin
-  .administrate.create{:style => 'display: none'}
-    = link_to 'Edit', edit_news_path(@news), class: 'button button-update'
+  - if current_admin
+    .administrate.create
+      = link_to 'Edit', edit_news_path(@news), class: 'button button-update'
 
 
 
