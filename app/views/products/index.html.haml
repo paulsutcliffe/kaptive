@@ -3,13 +3,13 @@
 
 
 %header
-  %h2.page-title{:style => 'display:none'}
+  %h2.page-title
     .caption
-      = page_title! 'Productos'
+      = page_title! 'Products'
 
   - if current_admin
     .administrate.create
-      = link_to 'Crear Producto', new_product_path, class: 'btn btn-primary'
+      = link_to 'New Product', new_product_path, class: 'btn btn-primary'
 
 
 
