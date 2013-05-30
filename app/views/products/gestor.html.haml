@@ -1,0 +1,32 @@
+%header
+  %h2.page-title
+    .caption
+      = page_title! 'Messages received'
+  %span.crud-date
+    %span.created_at
+      Last message received at:
+      = l @last_product.created_at, :format => :long
+
+.content
+  .content-inner
+    %table.table.table-striped.table-bordered
+      %thead
+        %tr
+          %th.table-name Model
+          %th.table-email Name
+          %th.table-date 
+          %th.table-crud
+          %th.table-crud
+          %th.table-crud
+    
+      %tbody
+        - @products.each do |product|
+          %tr
+            %td.table-name= image_tag product.bottle_url(:thumb) if product.bottle?
+            %td.table-email= product.name
+            %td.table-date= l product.created_at, :format => :long
+            %td= link_to 'Show', product, :class => 'button button-show'
+            %td= link_to 'Edit', edit_product_path(product), :class => 'button button-update'
+            %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button button-delete'
+    
+

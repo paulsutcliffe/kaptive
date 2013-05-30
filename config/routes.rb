@@ -4,7 +4,7 @@ Kaptive::Application.routes.draw do
   resources :about
 
   resources :products
-
+  match 'gestor' => 'products#gestor'
   resources :metadata
 
   resources :contacts
