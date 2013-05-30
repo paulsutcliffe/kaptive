@@ -28,9 +28,9 @@ Version: 1.1
                     index: 1, 
                     url:'http://www.youtube.com/embed/%id%?autoplay=1&amp;fs=1&amp;rel=0'},
                 vimeo: {
-                    reg: /vimeo\.com/i, 
-                    split: '/', 
-                    index: 3, 
+                    reg: /vimeo\.com/i,
+                    split: '/',
+                    index: 3,
                     url: 'http://player.vimeo.com/video/%id%?portrait=0&amp;autoplay=1'}
             };
             
@@ -273,8 +273,8 @@ Version: 1.1
             var o = settings,
                 n = numberSlides ,
                 opc = 1, 
-                hiddenSlide = n - o.slidesPerScroll; 
-        
+                hiddenSlide = n - o.slidesPerScroll;
+
             if (hiddenSlide < 2){
                 hiddenSlide = 2;
             }
@@ -284,7 +284,7 @@ Version: 1.1
                     hs2 = hiddenSlide / 2,
                     lastSlide1 = (s1+1) - hs2,
                     lastSlide2 = s1 + hs2;
-                    
+
                 if (p == 0){
                     opc = 1;
                 }
@@ -314,7 +314,7 @@ Version: 1.1
             var pos = new Array(),
                 o = settings,
                 n = numberSlides ;
-                        
+
             for (var i = 0; i < n; i++){
                 var sz = setSlideSize(i);
                 if (o.hAlign == 'left'){
@@ -329,20 +329,20 @@ Version: 1.1
                         pos[i] = {width:sz.width, height:sz.height, bottom:topPos(i), right:horizonPos(i), opacity:setOpacity(i)} ;
                     }
                 }
-            }                                            
-            return pos[p];  
+            }
+            return pos[p];
         };
         
         // returns the slide # at location i of the ith image
         var slidePos = function(i) {
-            var cs = currentSlide, 
+            var cs = currentSlide,
             pos = i - cs;
-            
+
             if (i < cs){
-                pos += numberSlides ; 
+                pos += numberSlides ;
             }
-                
-            return pos;       
+
+            return pos;
         };
         
         //returns z-index
@@ -471,7 +471,7 @@ Version: 1.1
             if (currentSlide > targetSlide) {
                 var forward = n - currentSlide + targetSlide,
                     backward = currentSlide - targetSlide;
-            } 
+            }
             else {
                 var forward = targetSlide - currentSlide,
                     backward = currentSlide + n - targetSlide ;
@@ -479,7 +479,7 @@ Version: 1.1
             
             if (forward > backward) {
                 dir = -1;
-            } 
+            }
             else {
                 dir = 1;
             }
@@ -487,7 +487,7 @@ Version: 1.1
             currentSlide += dir;
             if (currentSlide == n) { currentSlide = 0; }
             if (currentSlide == -1) { currentSlide = n - 1; }
-            
+
             hideVideoOverlay();
             buttonNavState();
             showDesc(currentSlide);
@@ -548,7 +548,7 @@ Version: 1.1
         var reflectionHeight = function(p){
             var h = 0,
                 o = settings ;
-                
+
             if (o.reflection == true){
                 h =  o.reflectionHeight * setImageSize(p).height;
             }
@@ -587,8 +587,8 @@ Version: 1.1
                     sz = setImageSize(i);
                 
                 $('<div class="reflection"></div>')
-                    .css({'position':'absolute', 'margin':'0', 'padding':'0', 'border':'none', 'overflow':'hidden', 'left':'0', 
-                        'top':setImageSize(i).height+'px', 'width':'100%', 'height':reflectionHeight(i)})
+                    .css({'z-index':'-1','position':'absolute', 'margin':'0', 'padding':'0', 'border':'none', 'overflow':'hidden', 'left':'0', 
+                        'top':(setImageSize(i).height-50)+'px', 'width':'100%', 'height':reflectionHeight(i)})
                     .appendTo(items.eq(i))
                     .append($('<img src="'+src+'" />').css({'width':sz.width+'px', 'height':sz.height+'px', 'left':'0','margin':'0', 
                         'padding':'0', 'border':'none', '-moz-transform':'rotate(180deg) scale(-1,1)', 

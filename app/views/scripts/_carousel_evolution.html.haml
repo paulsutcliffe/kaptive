@@ -29,7 +29,7 @@
         shadow:false,
         reflection:true,
         reflectionHeight:0.2,
-        reflectionOpacity:0.5,
+        reflectionOpacity:0.8,
         reflectionColor:'255,255,255',
         description:true, descriptionContainer:'.description',
         backOpacity:1,
@@ -44,6 +44,9 @@
     function perform_bundle_hacks() {
       sincronizar_carousel_con_descripciones();
       blur_image();
+      $('.reflection img').attr('src',function(i,e){
+        return e.replace("regular","blurred");
+      })
     }
 
     function sincronizar_carousel_con_descripciones() {

@@ -1,7 +1,7 @@
 class ProductsController < InheritedResources::Base
   before_filter :authenticate_admin!, except: [:index, :show]
 
-  def gestor
+  def list
     @products = Product.all
     @last_product = Product.last
   end
