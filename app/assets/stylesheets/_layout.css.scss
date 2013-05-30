@@ -4,8 +4,10 @@ body {font-family: $font-open-sans; color: '$dark'; line-height: 100%; font-size
 background: black}
 h1, h2, h3, h4, h5, h6, p, span, li, dd, a, input {color: '$dark'; margin: 0;
 line-height: 100%; font-weight: 300; font-family: $font-open-sans}
-h2.page-title, .title, .sub-title {color: white; @include inline-block;
+h2.page-title, .title, .sub-title, .sub-title a {color: white; @include inline-block; font-family: $font-open-sans-condensed;
 line-height: 115%; text-transform: uppercase }
+.sub-title, .sub-title a {text-transform: none}
+.page-sub-title {font-family: $font-open-sans-condensed; font-size: $font-semi-largest}
 ul, ol, dl, p {margin: 0} li {list-style: none}
 p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px; color: $gray-1}
 figure {margin: 0}
@@ -13,6 +15,7 @@ section {padding-bottom: $row-bottom;}
 
 #site-wrapper {background: $bg-hojas; -pie-background: $bg-hojas-pie}
 .container {}
+
 
 h2.page-title, .title {
   color: black;
@@ -46,6 +49,7 @@ header#main-header {
     @include makeColumn(4);
     height: $header-height;
   }
+  
   .header-components {
     height: $header-height;
     @include makeColumn(8);
@@ -59,6 +63,13 @@ header#main-header {
     .call-us {top: 35px}
     .call-us,
     nav.main-menu {position: absolute; right: 30px}
+  }
+}
+#slogan-wrapper {
+  text-align: center;
+h2.slogan {
+    font-size: $font-largest; font-family: $font-open-sans-condensed; color: $orange; @extend .border;
+    @include inline-block; padding: 10px; margin: 0 auto;
   }
 }
 
@@ -155,12 +166,12 @@ footer#main-footer {
   header {
     margin-left: 40px;
     h2.page-title {
-      text-transform: uppercase; font-weight: 600; padding-bottom: 35px;
+      text-transform: uppercase; font-weight: 700; padding-bottom: 35px;
       font-size: $font-largest; font-size: $font-heading-secondary;
       .caption {
         width: 290px; background: $yellow-2; padding: 15px 0 0 20px;
         b {
-         font-weight: 600
+         font-weight: 700
          }
       }
     }
@@ -197,7 +208,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 
   #news & {
     padding-bottom: $row-bottom;
-    h3 { padding: 12px 0 16px; a {font-size: $font-large; font-weight: 600; color: $gray-1}}
+    h3 { padding: 12px 0 16px; a {font-size: $font-large; font-weight: 700; color: $gray-1}}
   }
 }
 
@@ -220,7 +231,7 @@ body[id^="devise"] #content header h2.page-title .caption,
       .productos-imagen {
       }
       .product-label {
-        font-weight: bold; font-size: 14px; padding: 10px 0; display: block;
+        font-weight: 700; font-size: 14px; padding: 10px 0; display: block;
       }
       .link-read-more {}
     }
@@ -230,7 +241,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .show {
   .sub-title {
     .caption {
-      height: auto; padding: 10px 20px;
+      height: auto; padding: 10px 20px; text-transform: none;
     }
   }
   .producto-imagen {@include makeColumn(4); position: relative; top: -80px; text-align: center}
@@ -240,7 +251,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 
 .producto-benefit {
   .producto-benefit-inner, .box-title {
-    padding: 20px;
+    padding: 20px; font-family: $font-open-sans-condensed;
   }
   .box-title {background: #ffc100; padding: 20px 20px 10px; font-size: $font-large; font-weight: 600}
   .producto-benefit-inner {background: #f5f179; padding: 10px 20px 25px}
@@ -261,7 +272,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 
   .about-content {
     .about-field {padding-bottom: $row-bottom/2;
-      h3 {color: $orange; font-size: $font-large; padding-bottom: 10px}
+      h3 {color: $orange; font-size: $font-large; padding-bottom: 10px; font-family: $font-open-sans-condensed;}
     }
     &.about-primary-content {
       padding-top: 20px;
@@ -278,10 +289,10 @@ body[id^="devise"] #content header h2.page-title .caption,
 // news
 #news-presentation {
   h3 {padding-bottom: 30px; text-transform: uppercase}
-  p {font-size: $font-large;}
+  p {font-size: $font-semi-largest; font-family: $font-open-sans-condensed}
 }
 .news-headline {
-  p {color: black; font-size: $font-large; font-weight: 600}
+  p {color: black; font-size: $font-large; font-weight: 700}
 }
 .news-figure {@include image-right}
 
@@ -337,10 +348,15 @@ form {
 }
 #contacts form {padding-bottom: 65px}
 #contacts label, #contacts input, #contacts textarea {text-transform: uppercase}
-.form-instructions {color: black; font-size: $font-large; font-weight: 600}
+.form-instructions {color: black; font-weight: 700}
 .contact-wrapper {margin-left: 45px;}
-.contact-address, .contact-info {padding-bottom: 30px; font-size: $font-large; line-height: 125%;
+.contact-address, .contact-info {padding-bottom: 30px; font-size: $font-largest; line-height: 125%;
+font-family: $font-open-sans-condensed;
+  strong {
+    font-family: $font-open-sans-condensed; font-weight: 700
   }
+ 
+}
 
 .contact-info {color: $green-2;
  a {color: black}
@@ -355,12 +371,12 @@ body[id^="devise"] br {display: none}
   .carousel-inner {width: 470px; height: 200px; margin: 0 auto; padding: 0 40px;
     .thumbnails {margin: 0; padding-top: 8px;
       li {margin-left: 0px; padding-left: 20px; width: 236px;
-        &:hover {}
+        &:hover {background:$bottle-hover;}
         img {
           @include transition1;
         }
         h3 {text-align: center; @include text-heavy}
-        &.img-slice {background:$bottle-hover;
+        &.img-slice {
            width: 55px;
             img:hover {
               opacity: 0
@@ -410,7 +426,7 @@ body[id^="devise"] br {display: none}
 #products.show .alert-container .alert
 .message-original {color: $green}
 .message-updated-at{
-  color: orange; font-weight: bold
+  color: orange; font-weight: 700 
 
 }
 

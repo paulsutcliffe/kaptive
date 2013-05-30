@@ -12,7 +12,7 @@
   .content-inner
 
     #news-presentation
-      %h3
+      %h3.page-sub-title
         Working with the Media
       %p
         As a company, NWPI seek long lasting and strong relationships with our media partners. Our objective is to work together to build an environmentally friendly culture: full of wellness.
@@ -21,7 +21,7 @@
       %div{:class => 'resumen-id ' + cycle('break', '', '')}
         - if news.image?
           = link_to image_tag(news.image_url(:thumb)), news
-        %h3
+        %h3.sub-title
           = link_to news.title, news
         %p
           = truncate(news.content, :length => 145)
