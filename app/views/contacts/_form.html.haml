@@ -5,7 +5,10 @@
       %ul
         - @contact.errors.full_messages.each do |msg|
           %li= msg
-
+    :javascript
+      var alerta = document.getElementById('alert');
+      alerta.className += ' alert-error';
+      alerta.className = alerta.className.replace(/\balert-success\b/, '');
   .field
     = f.label :name
     = f.text_field :name

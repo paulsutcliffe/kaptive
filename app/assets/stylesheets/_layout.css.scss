@@ -373,7 +373,8 @@ body[id^="devise"] br {display: none}
   .carousel-inner {width: 470px; height: 200px; margin: 0 auto; padding: 0 40px;
     .thumbnails {margin: 0; padding-top: 8px;
       li {margin-left: 0px; padding-left: 20px; width: 236px;
-        &:hover {background:$bottle-hover;}
+        &:hover,
+        &.current-item {background:$bottle-hover;}
         img {
           @include transition1;
         }
