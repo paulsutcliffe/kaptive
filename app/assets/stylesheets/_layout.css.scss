@@ -66,7 +66,7 @@ header#main-header {
   }
 }
 #slogan-wrapper {
-  text-align: center;
+  text-align: right; padding-right: 32px;
 h2.slogan {
     font-size: $font-largest; font-family: $font-open-sans-condensed; color: $orange;
     border: 3px none #F5F179;
@@ -116,9 +116,9 @@ footer#main-footer {
   }
 
   .call-us {
-    right: 165px; color: $gray-light;
+    right: 165px; top: 46px; color: $gray-light; 
     b {
-      color: white;
+      color: white; font-size: 16px;
     }
   }
 
@@ -229,7 +229,7 @@ body[id^="devise"] #content header h2.page-title .caption,
     @include absolute(left, top, 0px, 0px);
     .resumen-content {
 
-      margin-left: 185px; width: 285px;
+      margin-left: 245px /*185px*/; margin-top: 65px; width: 285px;
       .productos-imagen {
       }
       .product-label {
@@ -247,7 +247,13 @@ body[id^="devise"] #content header h2.page-title .caption,
     }
   }
   .producto-imagen {@include makeColumn(4); position: relative; top: -80px; text-align: center}
-  .producto-detalles {@include makeColumn(8); position: relative; margin-top: 100px}
+  .producto-detalles {@include makeColumn(8); position: relative; margin-top: 100px;
+    .title {
+      .caption {
+        height: auto; padding-bottom: 10px; padding-right: 20px;
+      }
+    }
+  }
   .linea-vertical {height: 80px; top: -90px}
 }
 

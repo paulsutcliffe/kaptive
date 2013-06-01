@@ -34,8 +34,9 @@
               = truncate(product.description, length: 42, omission: '')
 
           .resumen-content
-            .productos-imagen
-              = image_tag product.bottle_url(:thumb) if product.bottle?
+            -#
+              .productos-imagen
+                = image_tag product.bottle_url(:thumb) if product.bottle?
 
             .productos-preview
               %span.product-label
