@@ -76,14 +76,14 @@
 
     function blur_image() {
       blur_false = 'regular';
-      blur = 'blurred';
+      blur_ = 'blurred';
       slides_list = slides.find('.indexed');
       blur_first_image();
 
       slides_list.click(function() {
         current_slide = $(this).find('img');
         current_slide_src = current_slide.attr('src');
-        current_slide_src_blur = current_slide_src.replace(blur, blur_false);
+        current_slide_src_blur = current_slide_src.replace(blur_, blur_false);
 
         blur_undo();
         current_slide.attr('src', current_slide_src_blur);
