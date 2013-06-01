@@ -380,9 +380,9 @@ body[id^="devise"] br {display: none}
     .thumbnails {margin: 0; padding-top: 8px;
       li {margin-left: 0px; padding-left: 20px; width: 236px;
         &:hover,
-        &.current-item {background:$bottle-hover;}
+        &.current-item {background:$bottle-hover; img {opacity: 0}}
         img {
-          @include transition1; margin-top: 15px; opacity: 0;
+          @include transition1; margin-top: 15px; 
         }
         h3 {text-align: center; @include text-heavy}
         &.img-slice {
