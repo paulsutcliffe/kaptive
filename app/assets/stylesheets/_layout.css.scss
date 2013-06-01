@@ -13,7 +13,7 @@ p {line-height: 145%; font-size: 15px; text-align: justify; padding-bottom: 20px
 figure {margin: 0}
 section {padding-bottom: $row-bottom;}
 
-#site-wrapper {background: $bg-hojas; -pie-background: $bg-hojas-pie}
+#site-wrapper {background: $bg-hojas; -pie-background: $bg-hojas-pie; @include css3pie}
 .container {}
 
 
