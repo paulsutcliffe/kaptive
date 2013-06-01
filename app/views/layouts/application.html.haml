@@ -28,6 +28,7 @@
     = favicon_link_tag 'favicon.png'
 
     = stylesheet_link_tag 'application.css'
+    
     = yield :css
 
     = #javascript_include_tag :defaults
@@ -39,6 +40,7 @@
 
     /[if lt IE 9]
       %script{:src => 'http://html5shim.googlecode.com/svn/trunk/html5.js'}
+      = stylesheet_link_tag 'http://arcomega.pe/css/ie-kaptive.css'
     = csrf_meta_tag
 
 
