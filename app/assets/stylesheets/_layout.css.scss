@@ -387,10 +387,6 @@ body[id^="devise"] br {display: none}
         h3 {text-align: center; @include text-heavy}
         &.img-slice {
            width: 55px; margin: 0;
-            img:hover {
-              opacity: 0;
-              /*min-height: 183px;*/
-            }
          }
       }
     }
