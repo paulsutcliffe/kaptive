@@ -382,7 +382,7 @@ body[id^="devise"] br {display: none}
         &:hover,
         &.current-item {background:$bottle-hover;}
         img {
-          @include transition1; margin-top: 15px;
+          @include transition1; margin-top: 15px; opacity: 0;
         }
         h3 {text-align: center; @include text-heavy}
         &.img-slice {
