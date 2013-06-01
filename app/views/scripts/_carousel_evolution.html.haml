@@ -18,7 +18,7 @@
         top:0,
         bottom:0,
         backZoom:0.8,
-        slidesPerScroll:3,
+        slidesPerScroll:6,
         speed:500,
         buttonNav:'none',
         directionNav:false,
@@ -87,6 +87,7 @@
 
         blur_undo();
         current_slide.attr('src', current_slide_src_blur);
+        return false;
       });
 
     }
