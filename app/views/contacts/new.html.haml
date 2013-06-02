@@ -19,10 +19,10 @@
         = raw(@metadata.address)
       .contact-info
         Email:
-        = @metadata.email
+        = mail_to @metadata.email
         %br
         Website:
-        = @metadata.web
+        = link_to @metadata.web, 'http://' + @metadata.web
         %br
         Kaptive:
-        = @metadata.kaptive
+        = link_to @metadata.kaptive, 'http://' + @metadata.kaptive
