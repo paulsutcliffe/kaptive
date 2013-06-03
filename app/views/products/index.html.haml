@@ -20,30 +20,16 @@
           <!-- SLIDE ITEM -->
           .indexed
             = image_tag product.bottle_url(:blurred) if product.bottle?
+        - @products.each do |product|
+          <!-- SLIDE ITEM -->
+          .indexed
+            = image_tag product.bottle_url(:blurred) if product.bottle?
+
 
     .product-description
       .linea-vertical
         .linea-horizontal
-      - @products.each do |product|
-        .resumen-id.indexed
-          %h3.title
-            .caption
-              = truncate(product.name, length: 36, omission: '')
-          %span.sub-title
-            .caption
-              = truncate(product.description, length: 42, omission: '')
-
-          .resumen-content
-            -#
-              .productos-imagen
-                = image_tag product.bottle_url(:thumb) if product.bottle?
-
-            .productos-preview
-              %span.product-label
-                Our brand
-              %p
-                = truncate(product.preview, length: 100)
-
-            = link_to 'Read more', product, :class => 'link link-read-more'
+      = render 'carousel_index'
+      = render 'carousel_index'
 
 
