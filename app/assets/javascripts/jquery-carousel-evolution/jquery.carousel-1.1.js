@@ -604,7 +604,7 @@ Version: 1.1
                 speed = option.speed,
                 sz = setImageSize(slidePos(i));
                 
-            ref.animate({'top':sz.height+'px', 'height':reflectionHeight(slidePos(i))}, speed, 'linear');
+            ref.animate({'top':(sz.height-50)+'px', 'height':reflectionHeight(slidePos(i))}, speed, 'linear');
             ref.children('img').animate(sz, speed, 'linear');        
         };
         
