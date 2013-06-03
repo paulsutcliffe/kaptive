@@ -44,6 +44,7 @@
     function perform_bundle_hacks() {
       sincronizar_carousel_con_descripciones();
       blur_image();
+      last_elements_with_low_opacity();
       $('.reflection img').attr('src',function(i,e){
         return e.replace("regular","blurred");
       })
@@ -69,10 +70,6 @@
          $('.product-description .indexed:eq(' + slide_index + ')').fadeIn();
       });
     }
-
-
-
-
 
     function blur_image() {
       blur_false = 'regular';
@@ -107,4 +104,30 @@
       first_image_src_blur_false = first_image_src.replace(blur_, blur_false);
 
       first_image.attr('src', first_image_src_blur_false);
+    }
+
+    function last_elements_with_low_opacity() {
+      slide.filter(function() {
+        return $(this).css('z-index') == 5;
+      }).each(function() {
+        $(this).css('opacity', .4);
+      });
+
+      slide.filter(function() {
+        return $(this).css('z-index') == 6;
+      }).each(function() {
+        $(this).css('opacity', .6);
+      });
+
+      slide.filter(function() {
+        return $(this).css('z-index') == 7;
+      }).each(function() {
+        $(this).css('opacity', .8);
+      });
+
+      slide.filter(function() {
+        return $(this).css('z-index') == 8;
+      }).each(function() {
+        $(this).css('opacity', .9);
+      });
     }
