@@ -18,7 +18,7 @@
         As a company, NWPI seek long lasting and strong relationships with our media partners. Our objective is to work together to build an environmentally friendly culture: full of wellness.
 
     - @news.each do |news|
-      %div{:class => 'resumen-id ' + cycle('break', '', '')}
+      %div{:class => 'resumen-id ' + cycle('break', '', 'third-col')}
         - if news.image?
           = link_to image_tag(news.image_url(:thumb)), news
         %h3.sub-title

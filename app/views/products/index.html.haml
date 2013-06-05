@@ -19,11 +19,15 @@
         - @products.each do |product|
           <!-- SLIDE ITEM -->
           .indexed
-            = image_tag product.bottle_url(:blurred) if product.bottle?
+            = image_tag product.bottle_url(:regular) if product.bottle?
         - @products.each do |product|
           <!-- SLIDE ITEM -->
           .indexed
-            = image_tag product.bottle_url(:blurred) if product.bottle?
+            = image_tag product.bottle_url(:regular) if product.bottle?
+        - @products.each do |product|
+          <!-- SLIDE ITEM -->
+          .indexed
+            = image_tag product.bottle_url(:regular) if product.bottle?
 
 
     .product-description
@@ -31,5 +35,8 @@
         .linea-horizontal
       = render 'carousel_index'
       = render 'carousel_index'
+      = render 'carousel_index'
+
+  = render 'shared/facebook_follow'
 
 

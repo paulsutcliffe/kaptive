@@ -10,4 +10,12 @@ class ProductsController < InheritedResources::Base
     @product = Product.find_by_slug(params[:id])
     @bottles = Product.select("id, bottle, slug")
   end
+
+  def update
+    update!{products_list_path}
+
+  end
+  def destroy
+    destroy!{products_list_path}
+  end
 end

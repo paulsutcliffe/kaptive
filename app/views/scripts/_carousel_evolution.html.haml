@@ -22,8 +22,8 @@
         speed:500,
         buttonNav:'none',
         directionNav:false,
-        autoplay:false,
-        autoplayInterval:5000,
+        autoplay: true,
+        autoplayInterval:3500,
         pauseOnHover:true,
         mouse:false,
         shadow:false,
@@ -43,8 +43,8 @@
 
     function perform_bundle_hacks() {
       sincronizar_carousel_con_descripciones();
-      blur_image();
-      last_elements_with_low_opacity();
+      //blur_image();
+      //last_elements_with_low_opacity();
       $('.reflection img').attr('src',function(i,e){
         return e.replace("regular","blurred");
       })

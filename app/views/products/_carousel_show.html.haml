@@ -1,7 +1,7 @@
 
 
 
-#productsCarousel.carousel.slide
+%div{id: 'productsCarousel', class: 'carousel slide slides-' + @bottles.length.to_s }
   <!-- Carousel items -->
   .carousel-inner
     - @bottles.each_slice(6) do |slice|

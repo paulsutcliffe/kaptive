@@ -1,20 +1,20 @@
 %ul
   - if current_admin
     %li.first
-      = link_to_unless_current 'Metadata', edit_metadatum_path(1) do
-        %span Metadata
+      = link_to_unless_current 'About Us', edit_about_path(1) do
+        %span About Us
     %li
       = link_to_unless_current 'Products', products_list_path do
         %span Products
-    %li
-      = link_to_unless_current 'About Us', edit_about_path(1) do
-        %span About Us
     %li
       = link_to_unless_current 'News', news_index_path do
         %span News
     %li.last
       = link_to_unless_current 'Contacts', contacts_path do
         %span Contacts
+    %li
+      = link_to_unless_current 'Metadata', edit_metadatum_path(1) do
+        %span Metadata
     %li.close-session
       = link_to 'Close Session', destroy_admin_session_path, method: :delete
 
@@ -23,16 +23,16 @@
       = link_to_unless_current 'Home', root_path do
         %span Home
     %li
-      = link_to_unless_current 'Products', product_path(@first_product.slug) do
-        %span Products
-    %li
       = link_to_unless_current 'About Us', about_path(1) do
         %span About Us
     %li
+      = link_to_unless_current 'Products', product_path(@first_product.slug) do
+        %span Products
+    %li
+      = link_to 'Store Locator', @metadata.store_locator, :target => '_blank'
+    %li
       = link_to_unless_current 'News', news_index_path do
         %span News
-    %li
+    %li.last
       = link_to_unless_current 'Contact', new_contact_path do
         %span Contact
-    %li.last
-      = link_to 'Store Locator', @metadata.store_locator, :target => '_blank'
