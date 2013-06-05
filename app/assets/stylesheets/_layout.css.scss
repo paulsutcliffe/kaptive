@@ -390,7 +390,7 @@ body[id^="devise"] br {display: none}
 
 #productsCarousel {width: 550px; margin: 0; @include inline-block; @include absolute(top, right, 50px, 0); padding: 0 40px;
   .carousel-inner {/*width: 470px; */ height: 200px; margin: 0 auto;
-    .thumbnails {margin: 0; padding-top: 8px;
+    .thumbnails {margin: 0;
       li {margin-left: 0px; padding-left: 20px; width: 236px;
         &:hover,
         &.current-item {background:$bottle-hover; img {opacity: 0}}
