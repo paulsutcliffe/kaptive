@@ -27,20 +27,20 @@
       .about-field
         %h3 NWPI History
         = paragraph(@about.history)
-    %figure.figure-about.aside
-      = image_tag @about.commitment_image_url if @about.commitment_image?
+
     .about-content.about-secondary-content
       .about-field
+        = image_tag @about.commitment_image_url if @about.commitment_image?
         %h3 Our Commitment
-        = paragraph(@about.commitment)
+        %p
+          = @about.commitment
       .about-field
-        %h3 Visión
-        = paragraph(@about.vision)
+        = image_tag @about.vision_image_url if @about.vision_image?
+        %h3 Vision
+        %p
+          = @about.vision
       .about-field
-        %h3 Misión
-        = paragraph(@about.mission)
-
- 
-  
-
-
+        = image_tag @about.mission_image_url if @about.mission_image?
+        %h3 Mission
+        %p
+          = @about.mission

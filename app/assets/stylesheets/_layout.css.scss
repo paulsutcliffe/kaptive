@@ -291,7 +291,8 @@ body[id^="devise"] #content header h2.page-title .caption,
   }
 
   .about-content {
-    .about-field {padding-bottom: $row-bottom/2;
+    .about-field {padding-bottom: $row-bottom/2; margin-bottom: 100px;
+      img {float: right; margin-left: 20px;}
       h3 {color: $orange; font-size: $font-large; padding-bottom: 10px; font-family: $font-open-sans-condensed;}
     }
     &.about-primary-content {
@@ -300,7 +301,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 
     }
     &.about-secondary-content {
-      width: 620px;
+      // width: 620px;
     }
   }
 

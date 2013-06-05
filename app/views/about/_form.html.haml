@@ -22,7 +22,13 @@
     = f.label :vision
     = f.text_area :vision
   .field
+    = f.label :vision_image
+    = f.file_field :vission_image
+  .field
     = f.label :mission
     = f.text_area :mission
+  .field
+    = f.label :mission_image
+    = f.file_field :mission_image
   .actions
     = f.submit 'Save'
