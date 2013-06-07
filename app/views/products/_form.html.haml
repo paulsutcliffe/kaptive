@@ -10,14 +10,14 @@
     = f.label :name
     = f.text_field :name
   .field
-    = f.label :caption
-    = f.text_field :caption
+    = #f.label :caption
+    = #f.text_field :caption
   .field
     = f.label :description
     = f.text_area :description
   .field.ckeditor
     = f.label :content
-    = f.text_area :content
+    = f.text_area :content, class: 'tiny-mce'
   .field
     = f.label :preview
     = f.text_area :preview

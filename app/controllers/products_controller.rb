@@ -12,7 +12,7 @@ class ProductsController < InheritedResources::Base
   end
 
   def update
-    update!{products_list_path}
+    update!{product_path(@product)}
 
   end
   def destroy

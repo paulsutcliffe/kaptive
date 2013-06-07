@@ -1,5 +1,5 @@
-= content_for :javascript do
-  = javascript_include_tag 'http://localhost:3000/javascripts/ckeditor/ckeditor.js'
+= render 'scripts/tiny_mce'
+
 
 - page_title! 'Edit product ' + @product.name
 
