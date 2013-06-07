@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
+gem 'tinymce-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -46,7 +48,6 @@ gem "unicorn"
 # Deploy with Capistrano
 gem "capistrano"
 
-gem "tinymce-rails"
 gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"
