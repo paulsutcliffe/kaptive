@@ -17,8 +17,7 @@
           %th.table-date Date
           %th.table-crud
           %th.table-crud
-          %th.table-crud
-    
+
       %tbody
         - @contacts.each do |contact|
           %tr
@@ -26,6 +25,5 @@
             %td.table-email= contact.email
             %td.table-date= l contact.created_at, :format => :long
             %td= link_to 'Show', contact, :class => 'button button-show'
-            %td= link_to 'Edit', edit_contact_path(contact), :class => 'button button-update'
             %td= link_to 'Destroy', contact, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button button-delete'
-    
+

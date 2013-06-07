@@ -14,13 +14,10 @@
     = f.text_field :caption
   .field
     = f.label :description
-    = f.text_area :description
+    = f.text_area :description, class: 'tinymce'
   .field.ckeditor
     = f.label :content
-    = f.text_area :content, class: 'tiny-mce'
-  .field
-    = f.label :preview
-    = f.text_area :preview
+    = f.text_area :content, class: 'tinymce'
   .field
     = f.label :bottle
     = f.file_field :bottle

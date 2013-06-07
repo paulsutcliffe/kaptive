@@ -25,7 +25,6 @@ gem 'jquery-rails'
 group :development, :test do
   gem "rspec-rails", "~> 2.13.0"
   gem "factory_girl_rails", "~> 4.2.1"
-  gem "ckeditor"
 end
 
 group :test do
@@ -47,6 +46,7 @@ gem "unicorn"
 # Deploy with Capistrano
 gem "capistrano"
 
+gem "tinymce-rails"
 gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"
@@ -56,5 +56,5 @@ gem "inherited_resources"
 gem "page_title_helper"
 gem "friendly_id", "~> 4.0.9"
 gem "devise"
-gem 'mini_magick'
+gem "mini_magick"
 gem "carrierwave"

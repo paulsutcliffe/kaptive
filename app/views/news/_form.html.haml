@@ -11,10 +11,10 @@
     = f.text_field :title
   .field
     = f.label :headline
-    = f.text_area :headline
+    = f.text_area :headline, class: 'tinymce'
   .field
     = f.label :content
-    = f.text_area :content
+    = f.text_area :content, class: 'tinymce'
   .field
     = f.label :image
     = f.file_field :image

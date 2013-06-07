@@ -1,15 +1,17 @@
 Kaptive::Application.routes.draw do
   devise_for :admins
 
-  resources :about
+  match "/about_us" => "about#show", :via => :get, :defaults => { :id => '1' }
+
+  resources :about, :only => [:edit, :show]
 
   match '/products/list' => 'products#list'
 
   resources :products
 
-  resources :metadata
+  resources :metadata, :only => [:edit, :index, :show]
 
-  resources :contacts
+  resources :contacts, :except => :edit
 
   resources :news
 

@@ -23,7 +23,7 @@
       = link_to_unless_current 'Home', root_path do
         %span Home
     %li
-      = link_to_unless_current 'About Us', about_path(1) do
+      = link_to_unless_current 'About Us', about_us_path do
         %span About Us
     %li
       = link_to_unless_current 'Products', product_path(@first_product.slug) do
