@@ -380,8 +380,7 @@ font-family: $font-open-sans-condensed;
 }
 
 .contact-info {color: $green-2;
- a {color: black}
-
+ a {color: black; font-family:$font-open-sans-condensed}
 }
 
 // devise
@@ -456,3 +455,10 @@ body[id^="devise"] br {display: none}
 .table-bordered td b {float: left; width: 100px}
 .campo-tabla {overflow: hidden}
 .table-bordered th, .table-bordered td {background: white}
+
+/* #Tablet (Portrait) corrige las hojas que se pegan al logo
+================================================== */
+@media only screen and (min-width: 460px) and (max-width: 1250px) {
+   
+  #site-wrapper {background: white}   
+}

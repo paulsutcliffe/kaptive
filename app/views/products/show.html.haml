@@ -1,8 +1,9 @@
+- page_title! @product.name
 
 %header
   %h2.page-title
     .caption
-      = page_title! 'Products'
+      Products
   - if current_admin
     .administrate.create
       = link_to 'New Product', new_product_path, class: 'button button-create'
