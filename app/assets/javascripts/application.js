@@ -22,3 +22,4 @@
 //= require jquery-carousel-evolution/jquery.mousewheel.min
 //= jquery-carousel-evolution/jquery.carousel-1.1
 //= require tinymce
+//= require tinymce-jquery
