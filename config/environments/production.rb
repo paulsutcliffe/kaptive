@@ -46,7 +46,7 @@ Kaptive::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += ['jquery-carousel-evolution/carousel.css', 'jquery-carousel-evolution/jquery-1.4.4.min.js', 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js']
+  config.assets.precompile += ['jquery-carousel-evolution/carousel.css', 'jquery-carousel-evolution/jquery-1.4.4.min.js', 'jquery-carousel-evolution/jquery.mousewheel.min.js', 'jquery-carousel-evolution/jquery.carousel-1.1.js', 'tinymce/js/tinymce/tinymce.min.js']
   #  config.assets.initialize_on_precompile = false
 
   # Disable delivery errors, bad email addresses will be ignored
