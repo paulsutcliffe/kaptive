@@ -1,7 +1,7 @@
 %header
   %h2.page-title
     .caption
-      = page_title! 'Contact'
+      = page_title! 'Contact Details'
 
   - if current_admin
     .administrate.create
@@ -13,11 +13,6 @@
 %section.content
   .content-inner
     %table.table.table-striped.table-bordered
-      %thead
-        %tr
-          %td{colspan: 2}
-            %b
-              MENSAJE
       %tbody
         %tr
           %td{colspan: 2}
@@ -41,15 +36,3 @@
               Message:
             .campo-tabla
               = @contact.message
-
-    - if @contact.created_at == @contact.updated_at
-      %span.message-original
-        %span
-          Mensaje sin editar
-    - else
-      %span.message-updated-at
-        %span
-          Mensaje editado
-        = l @contact.updated_at, :format => :long
-
-
