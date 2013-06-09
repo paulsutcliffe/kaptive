@@ -3,13 +3,13 @@ Kaptive::Application.routes.draw do
 
   match "/about_us" => "about#show", :via => :get, :defaults => { :id => '1' }
 
-  resources :about, :only => [:edit, :show]
+  resources :about, :only => [:edit, :show, :update]
 
   match '/products/list' => 'products#list'
 
   resources :products
 
-  resources :metadata, :only => [:edit, :index, :show]
+  resources :metadata, :only => [:edit, :index, :show, :update]
 
   resources :contacts, :except => :edit
 
