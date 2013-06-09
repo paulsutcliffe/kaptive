@@ -5,10 +5,9 @@
 
   - if current_admin
     .administrate.create
-      = link_to 'Edit', edit_contact_path(@contact), class: 'button button-update'
       = link_to 'Back', contacts_path, class: 'button button-back'
       = link_to 'Destroy', @contact, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'button button-delete'
-    
+
 
 
 %section.content
@@ -19,17 +18,17 @@
           %td{colspan: 2}
             %b
               MENSAJE
-      %tbody 
+      %tbody
         %tr
           %td{colspan: 2}
             %b
               Name:
             .campo-tabla
               = @contact.name
-        
+
         %tr
           %td
-            %b 
+            %b
               Email:
             = @contact.email
           %td
@@ -52,5 +51,5 @@
         %span
           Mensaje editado
         = l @contact.updated_at, :format => :long
-      
-      
+
+
