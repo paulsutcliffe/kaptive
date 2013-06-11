@@ -42,7 +42,7 @@ h2.page-title, .title {
 .front .caption {white-space: nowrap}
 .sub-title {
   .caption {
-    padding-top: 10px;
+    padding-top: 11px;
   }
 }
 
@@ -284,7 +284,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .figcaption-about {
   @include absolute(right, top, 0px, 50px); width: 525px;
   .sub-title {
-    .caption {font-size: $font-medium; text-transform: none; color: white}
+    .caption {/*font-size: $font-medium; */  text-transform: none; color: white}
   }
 
 
