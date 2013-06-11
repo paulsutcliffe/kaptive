@@ -41,3 +41,7 @@
         = image_tag @about.mission_image_url if @about.mission_image?
         %h3 Mission
         = raw(@about.mission)
+      .about-field
+        = image_tag @about.values_image_url if @about.values_image?
+        %h3 Values
+        = raw(@about.values)

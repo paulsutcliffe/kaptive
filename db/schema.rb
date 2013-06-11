@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605071154) do
+ActiveRecord::Schema.define(:version => 20130611013723) do
 
   create_table "about", :force => true do |t|
     t.text     "history"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20130605071154) do
     t.string   "commitment_image"
     t.string   "vision_image"
     t.string   "mission_image"
+    t.text     "values"
+    t.string   "values_image"
   end
 
   create_table "admins", :force => true do |t|
