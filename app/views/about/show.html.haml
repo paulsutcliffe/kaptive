@@ -32,12 +32,12 @@
       .about-field
         = image_tag @about.commitment_image_url if @about.commitment_image?
         %h3 Our Commitment
-        = paragraph(@about.commitment)
+        = raw(@about.commitment)
       .about-field
         = image_tag @about.vision_image_url if @about.vision_image?
         %h3 Vision
-        = paragraph(@about.vision)
+        = raw(@about.vision)
       .about-field
         = image_tag @about.mission_image_url if @about.mission_image?
         %h3 Mission
-        = paragraph(@about.mission)
+        = raw(@about.mission)
