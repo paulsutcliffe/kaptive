@@ -42,6 +42,7 @@
     });
 
     function perform_bundle_hacks() {
+      auto_sincronizar_y_desvanecer();
       sincronizar_carousel_con_descripciones();
       //blur_image();
       //last_elements_with_low_opacity();
@@ -69,6 +70,20 @@
          descripciones.hide();
          $('.product-description .indexed:eq(' + slide_index + ')').fadeIn();
       });
+    }
+
+    function auto_sincronizar_y_desvanecer() {
+      botella_cantidad = $('.botellon').length;
+      botella_cantidad = botella_cantidad - 2;
+
+       $('.slides').find('.indexed').filter(function() {
+        return $(this).css('z-index') == botella_cantidad;
+      }).each(function() {
+        slide_index_ = $(this).index();
+      });
+
+      $('.product-description .indexed').hide();
+      $('.product-description .indexed:eq(' + slide_index_ + ')').fadeIn();
     }
 
     function blur_image() {
