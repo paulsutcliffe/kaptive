@@ -19,20 +19,19 @@
         - @products.each do |product|
           <!-- SLIDE ITEM -->
           .indexed
-            = image_tag product.bottle_url(:regular) if product.bottle?
+            = image_tag product.bottle_url(:regular), class: 'botellon' if product.bottle?
         - @products.each do |product|
           <!-- SLIDE ITEM -->
           .indexed
-            = image_tag product.bottle_url(:regular) if product.bottle?
+            = image_tag product.bottle_url(:regular), class: 'botellon' if product.bottle?
         - @products.each do |product|
           <!-- SLIDE ITEM -->
           .indexed
-            = image_tag product.bottle_url(:regular) if product.bottle?
+            = image_tag product.bottle_url(:regular), class: 'botellon' if product.bottle?
 
 
     .product-description
-      .linea-vertical
-        .linea-horizontal
+      
       = render 'carousel_index'
       = render 'carousel_index'
       = render 'carousel_index'

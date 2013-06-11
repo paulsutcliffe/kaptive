@@ -40,7 +40,11 @@ h2.page-title, .title {
 }
 
 .front .caption {white-space: nowrap}
-
+.sub-title {
+  .caption {
+    padding-top: 11px;
+  }
+}
 
 header#main-header {
   position: relative;
@@ -280,7 +284,7 @@ body[id^="devise"] #content header h2.page-title .caption,
 .figcaption-about {
   @include absolute(right, top, 0px, 50px); width: 525px;
   .sub-title {
-    .caption {font-size: $font-medium; text-transform: none; color: white}
+    .caption {/*font-size: $font-medium; */  text-transform: none; color: white}
   }
 
 
@@ -291,9 +295,10 @@ body[id^="devise"] #content header h2.page-title .caption,
   }
 
   .about-content {
-    .about-field {padding-bottom: $row-bottom/2; margin-bottom: 100px;
+    .about-field {padding-bottom: $row-bottom/2; margin-bottom: 20px;
       img {float: right; margin-left: 20px;}
-      h3 {color: $orange; font-size: $font-large; padding-bottom: 10px; font-family: $font-open-sans-condensed;}
+      h3 {color: $orange; /*font-size: $font-large; */ padding-bottom: 10px; font-family: $font-open-sans-condensed;}
+      p {overflow: hidden}
     }
     &.about-primary-content {
       padding-top: 20px;

@@ -30,5 +30,11 @@
   .field
     = f.label :mission_image
     = f.file_field :mission_image
+  .field
+    = f.label :values
+    = f.text_area :values, class: 'tinymce'
+  .field
+    = f.label :values_image
+    = f.file_field :values_image
   .actions
     = f.submit 'Save'

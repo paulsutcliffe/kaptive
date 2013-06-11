@@ -1,5 +1,8 @@
 - @products.each do |product|
+  
   .resumen-id.indexed
+    .linea-vertical
+      .linea-horizontal
     %h3.title
       .caption
         = link_to truncate(product.name, length: 36, omission: ''), product
