@@ -40,7 +40,11 @@ h2.page-title, .title {
 }
 
 .front .caption {white-space: nowrap}
-
+.sub-title {
+  a {
+    padding-top: 10px;
+  }
+}
 
 header#main-header {
   position: relative;
