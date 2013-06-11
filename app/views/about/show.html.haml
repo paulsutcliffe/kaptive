@@ -26,21 +26,21 @@
     .about-content.about-primary-content
       .about-field
         %h3 NWPI History
-        = @about.history
+        = raw(@about.history)
 
     .about-content.about-secondary-content
       .about-field
         = image_tag @about.commitment_image_url if @about.commitment_image?
         %h3 Our Commitment
         %p
-          = @about.commitment
+          = raw(@about.commitment)
       .about-field
         = image_tag @about.vision_image_url if @about.vision_image?
         %h3 Vision
         %p
-          = @about.vision
+          = raw(@about.vision)
       .about-field
         = image_tag @about.mission_image_url if @about.mission_image?
         %h3 Mission
         %p
-          = @about.mission
+          = raw(@about.mission)
