@@ -1,3 +1,17 @@
+:javascript
+  $(document).ready(function(){
+    $('.producto-imagen').hover(
+    function() {
+      $(this).children(".bottle-back").show();
+      $(this).children(".bottle-front").hide();
+    },
+    function() {
+      $(this).children(".bottle-front").show();
+      $(this).children(".bottle-back").hide();
+    }
+    );
+  });
+
 - page_title! @product.name
 
 %header
@@ -14,7 +28,8 @@
 
 .content
   .producto-imagen
-    = image_tag @product.bottle_url(:regular) if @product.bottle?
+    = image_tag @product.bottle_url(:regular), class: 'bottle-front' if @product.bottle?
+    = image_tag @product.bottleback_url(:regular), class: 'bottle-back' if @product.bottleback?
   .producto-detalles
     .linea-vertical
       .linea-horizontal

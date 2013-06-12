@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611013723) do
+ActiveRecord::Schema.define(:version => 20130612053728) do
 
   create_table "about", :force => true do |t|
     t.text     "history"
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(:version => 20130611013723) do
     t.text     "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "mercury_images", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "metadata", :force => true do |t|
