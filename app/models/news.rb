@@ -1,5 +1,5 @@
 class News < ActiveRecord::Base
-  attr_accessible :content, :headline, :title, :image
+  attr_accessible :content, :headline, :title, :image, :link
   mount_uploader :image, ImageUploader
 
   extend FriendlyId

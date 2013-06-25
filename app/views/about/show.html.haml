@@ -21,18 +21,20 @@
           Coca Leaf
       %span.sub-title
         .caption
-          The health benefits of the natural Coca-Leaf have been known for thousands of years.
+          We are a functional foods company that develop original products that respond to consumers in the modern world.
 
     .about-content.about-primary-content
       .about-field
         %h3 NWPI History
         = paragraph(@about.history)
+        = link_to 'New World Products International', 'http://www.nworldp.com/about.html', :class => 'link link-foundation', :target => '_blank'
 
     .about-content.about-secondary-content
       .about-field
         = image_tag @about.commitment_image_url if @about.commitment_image?
         %h3 Our Commitment
         = raw(@about.commitment)
+        = link_to 'Cuzco Development Foundation', 'http://www.nworldp.com/foundation.html', :class => 'link link-foundation', :target => '_blank'
       .about-field
         = image_tag @about.vision_image_url if @about.vision_image?
         %h3 Vision

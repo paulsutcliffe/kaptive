@@ -26,7 +26,10 @@
           = link_to news.title, news
         %p
           = truncate(news.content, :length => 145)
-        = link_to 'Read more', news, class: 'link link-read-more'
+        - if news.link
+          = link_to 'Read more', news.link, class: 'link link-read-more', :target => '_blank'
+        - else
+          = link_to 'Read more', news, class: 'link link-read-more'
         - if current_admin
           .administrate.iterate
             = link_to 'Show', news, class: 'button button-show'

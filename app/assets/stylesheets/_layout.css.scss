@@ -299,6 +299,7 @@ body[id^="devise"] #content header h2.page-title .caption,
       img {float: right; margin-left: 20px;}
       h3 {color: $orange; /*font-size: $font-large; */ padding-bottom: 10px; font-family: $font-open-sans-condensed;}
       p {overflow: hidden}
+      a {color: $black; font-weight: bold; font-family: $font-open-sans;}
     }
     &.about-primary-content {
       padding-top: 20px;
@@ -374,7 +375,7 @@ form {
 }
 #contacts form {padding-bottom: 65px}
 #contacts label, #contacts input, #contacts textarea {text-transform: uppercase}
-.form-instructions {color: black; font-weight: 700}
+.form-instructions {color: black; font-weight: 300}
 .contact-wrapper {margin-left: 45px;}
 .contact-address, .contact-info {padding-bottom: 30px; font-size: $font-largest; line-height: 125%;
 font-family: $font-open-sans-condensed;
