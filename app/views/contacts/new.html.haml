@@ -22,14 +22,14 @@
         = mail_to @metadata.email
         %br
         Corporate Website:
-        = link_to @metadata.web, 'http://' + @metadata.web
+        = link_to @metadata.web, 'http://' + @metadata.web, :target => '_blank'
         %br
         Kaptive Webiste:
-        = link_to @metadata.kaptive, 'http://' + @metadata.kaptive
+        = link_to @metadata.kaptive, 'http://' + @metadata.kaptive, :target => '_blank'
         %br
         Facebook:
-        = link_to @metadata.facebook, 'http://' + @metadata.facebook
+        = link_to @metadata.facebook, 'http://' + @metadata.facebook, :target => '_blank'
         %br
         Twitter:
-        = link_to @metadata.twitter, '@' + @metadata.twitter
+        = link_to '@' + @metadata.twitter, 'http://www.twitter.com/' + @metadata.twitter, :target => '_blank'
 
