@@ -5,5 +5,5 @@ class News < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates :content, :headline, :title, :image, :presence => true
+  validates :title, :image, :presence => true
 end
