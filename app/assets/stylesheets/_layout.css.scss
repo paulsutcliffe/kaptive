@@ -297,6 +297,10 @@ body[id^="devise"] #content header h2.page-title .caption,
   .about-content {
     .about-field {padding-bottom: $row-bottom/2; margin-bottom: 20px;
       img {float: right; margin-left: 20px;}
+      .img-commitment {margin-top: 40px;}
+      .img-vision {margin-top: 30px;}
+      .img-mission {margin-top: 20px;}
+      .img-values {margin-top: 10px;}
       h3 {color: $orange; /*font-size: $font-large; */ padding-bottom: 10px; font-family: $font-open-sans-condensed;}
       p {overflow: hidden}
       a {color: $black; font-weight: bold; font-family: $font-open-sans;}

@@ -21,8 +21,15 @@
         Email:
         = mail_to @metadata.email
         %br
-        Website:
+        Corporate Website:
         = link_to @metadata.web, 'http://' + @metadata.web
         %br
-        Kaptive:
+        Kaptive Webiste:
         = link_to @metadata.kaptive, 'http://' + @metadata.kaptive
+        %br
+        Facebook:
+        = link_to @metadata.facebook, 'http://' + @metadata.facebook
+        %br
+        Twitter:
+        = link_to @metadata.twitter, '@' + @metadata.twitter
+

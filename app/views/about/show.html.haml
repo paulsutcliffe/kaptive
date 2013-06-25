@@ -5,9 +5,9 @@
     .caption
       = page_title! 'About us'
 
-  //- if current_admin
-  .administrate.create{:style => 'display: none'}
-    = link_to 'Edit', edit_about_path(@about), class: 'button button-update'
+  - if current_admin
+    .administrate.create
+      = link_to 'Edit', edit_about_path(@about), class: 'button button-update'
 
 
 
@@ -31,19 +31,19 @@
 
     .about-content.about-secondary-content
       .about-field
-        = image_tag @about.commitment_image_url if @about.commitment_image?
+        = image_tag @about.commitment_image_url, class: 'img-commitment' if @about.commitment_image?
         %h3 Our Commitment
         = raw(@about.commitment)
         = link_to 'Cuzco Development Foundation', 'http://www.nworldp.com/foundation.html', :class => 'link link-foundation', :target => '_blank'
       .about-field
-        = image_tag @about.vision_image_url if @about.vision_image?
+        = image_tag @about.vision_image_url, class: 'img-vision' if @about.vision_image?
         %h3 Vision
         = raw(@about.vision)
       .about-field
-        = image_tag @about.mission_image_url if @about.mission_image?
+        = image_tag @about.mission_image_url, class: 'img-mission' if @about.mission_image?
         %h3 Mission
         = raw(@about.mission)
       .about-field
-        = image_tag @about.values_image_url if @about.values_image?
+        = image_tag @about.values_image_url, class: 'img-values' if @about.values_image?
         %h3 Values
         = raw(@about.values)

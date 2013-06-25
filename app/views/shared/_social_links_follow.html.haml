@@ -1,5 +1,5 @@
 %ul.social-links.follow
   %li.facebook
-    = link_to image_tag('social-link-facebook.png'), @metadata.facebook, target: '_blank'
+    = link_to image_tag('social-link-facebook.png'), 'http://' + @metadata.facebook, target: '_blank'
   %li.twitter
-    = link_to image_tag('social-link-twitter.png'), @metadata.twitter, target: '_blank'
+    = link_to image_tag('social-link-twitter.png'), 'http://www.twitter.com/' + @metadata.twitter, target: '_blank'
