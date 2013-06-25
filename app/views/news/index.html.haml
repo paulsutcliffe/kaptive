@@ -25,7 +25,7 @@
         %h3.sub-title
           = link_to news.title, news
         %p
-          = truncate(raw(news.content), :length => 145)
+          = truncate(strip_tags(news.content), :length => 145)
         - if news.link
           = link_to 'Read more', news.link, class: 'link link-read-more', :target => '_blank'
         - else
