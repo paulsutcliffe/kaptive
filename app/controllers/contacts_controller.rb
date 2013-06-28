@@ -7,10 +7,12 @@ class ContactsController < InheritedResources::Base
   end
 
   def create
-    @contact = Contact.new(params[:contacto])
+    @contact = Contact.new(params[:contact])
 
     create! do |success, failure|
       success.html do
+        ContactMailer.contact_confirmation(@contact).deliver
+
         flash[:notice] = "Your message was sent."
         redirect_to new_contact_path
       end
