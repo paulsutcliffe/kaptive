@@ -67,6 +67,16 @@ class BottleUploader < CarrierWave::Uploader::Base
 
   private
 
+  def enderezar(w, h)
+    manipulate! do |image|
+      if image[:width] > image[:height]
+        process resize_to_fill => [w, h]
+      else
+        process resize_to_fill => [h, w]
+      end
+    end
+  end
+
   # Simplest way
   def crop(geometry)
     manipulate! do |img|
@@ -78,8 +88,8 @@ class BottleUploader < CarrierWave::Uploader::Base
   # Resize and crop square from Center
   def resize_and_crop(size)
     manipulate! do |image|
-      cutheight = ((image[:height])/2).round
-      cutwidth = ((image[:width])/3).round
+      cutheight = ((image[:height])/3).round
+      cutwidth = ((image[:width])/2).round
       cropwidth = cutwidth*2
       image.crop("#{cropwidth}x#{cropwidth}+#{cutwidth}+#{cutheight}")
       image.resize("#{size}x#{size}")
