@@ -3,7 +3,7 @@ class ContactMailer < ActionMailer::Base
 
   def contact_confirmation(contact)
     @contact = contact
-    mail(:to => "paul@kosmyka.com", :reply_to => 'web@mykaptive.com', :subject => "Web Message")
+    mail(:to => "info@nworldp.com", :reply_to => contact.email, :subject => "Web Message")
   end
 
 end
